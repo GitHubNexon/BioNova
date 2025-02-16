@@ -1,0 +1,28 @@
+/* Parallax container */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  opactiy: 0.7;
+  margin-bottom: 0;
+}
+
+/* Parallax background */
+.parallax-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(0); /* Creates a stacking context for the transform */
+  will-change: transform; /* Optimizes performance for transform */
+}
+
+/* Content that scrolls over the background */
+.content {
+  position: relative;
+  z-index: 1; /* Ensures the content is on top of the background */
+  margin: 0;
+}

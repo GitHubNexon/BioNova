@@ -1,0 +1,72 @@
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-50%); } 
+}
+
+
+// Styling
+.slider {
+	// background: #E0E1DD;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	height: calc(100px + 20px); /* Adjust height to include padding (20px top + 20px bottom) */
+	padding-top: 10px; /* Adjust the padding as needed */
+	padding-bottom: 10px; /* Adjust the padding as needed */
+
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		position: absolute;
+		width: 200px;
+		height: 100%; /* Cover full height of the slider including padding */
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(350px * 15);
+		
+	}
+	
+	.slide {
+		height: 100px;
+		width: 250px;
+		display: flex;
+  		align-items: center; /* Centers the image vertically */
+  		justify-content: center; /* Centers the image horizontally */
+  		/* Optional: add padding or margin if needed */
+	}
+	
+}
+
+img {
+	object-fit: contain; /* Ensures the image is fully visible while maintaining aspect ratio */
+	max-height: 100%; /* Ensures the image does not exceed the container height */
+	max-width: 100%; /* Ensures the image does not exceed the container width */
+	width: auto; /* Sets the width of the image to its intrinsic width */
+    height: auto; /* Sets the height of the image to its intrinsic height */
+  }

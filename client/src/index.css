@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Orbitron:wght@400..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: #e0e1dd;
+  --text-color: #1b263b;
+  --primary-color: #778da9;
+  --secondary-color: #415a77;
+  --highlight-color: #0d1b2a;
+}
+
+[data-theme="dark"] {
+  --background-color: #0d1b2a;
+  --text-color: #e0e1dd;
+  --primary-color: #415a77;
+  --secondary-color: #778da9;
+  --highlight-color: #1b263b;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Add hover effect for the button */
+button:hover {
+  background-color: var(--secondary-color); /* Change to the secondary color */
+  transform: scale(1.05); /* Optional: scale effect on hover */
+}
+a {
+  color: var(--secondary-color);
+}
+a:hover {
+  color: var(--primary-color);
+}
+
+h2 {
+  @apply text-xl md:text-4xl;
+  font-family: "Orbitron", sans-serif;
+}
+
+p {
+  @apply text-xl tracking-tight leading-relaxed;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Add hover effect to <a> inside <li> */
+li a {
+  color: var(--text-color); /* Initial color of links */
+}
+
+/* Hover effect on <a> tags */
+li a:hover {
+  color: var(--primary-color); /* Color change on hover */
+}
+
+.fade {
+  transition: opacity 1s, visibility 1s !important;
+}
+
+.animated-border {
+  transition: border-color 1s !important;
+}
+
+.red-border {
+  border: 1px solid red;
+}
+
+.loader {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(192, 192, 192, 0.538) !important;
+  backdrop-filter: blur(5px) !important;
+}
+
+.modal {
+  background-color: rgba(192, 192, 192, 0.538);
+  backdrop-filter: blur(5px);
+}
+
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* Style the scrollbar track (the part the thumb slides along) */
+::-webkit-scrollbar-track {
+  background: #415A77; /* Background color of the track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #e0e1dd; /* Background color of the thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0D1B2A; /* Darker background color when hovered */
+}
+
+/* Add transition to the height property for smooth expansion/collapse */
+.animated-list {
+  overflow: hidden; /* Hide content that overflows */
+  transition: height 0.3s ease; /* Adjust duration and timing */
+}
+
+.animated-list-enter {
+  height: 0;
+}
+
+.animated-list-enter-active {
+  height: auto;
+}
+
+.animated-list-exit {
+  height: auto;
+}
+
+.animated-list-exit-active {
+  height: 0;
+}
+.scrollable-table-container {
+  height: 400px; /* Adjust as needed */
+  overflow-y: auto;
+  overflow-x: auto;
+}
