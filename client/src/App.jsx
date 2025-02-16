@@ -26,7 +26,7 @@ function App() {
         draggable
         pauseOnHover
       />
-      <Router basename="/BioNovaSolutions/">
+      <Router basename="/BioNova/">
         <Routes>
           <Route path="/" element={<Navigation />} />
         </Routes>
