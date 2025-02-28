@@ -1,37 +1,24 @@
-import React, { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navigation from "./Routes/Navigation";
-
-
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/A - Navbar/Navbar.jsx";
+import Home from "./pages/Home Page/Home.jsx";
+import Footer from "./components/B - Footer/Footer.jsx";
+import Innovation from "./pages/Innovation Page/Innovation.jsx";
 
 function App() {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
-
   return (
-    <>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      <Router basename="/BioNova/">
-        <Routes>
-          <Route path="/" element={<Navigation />} />
-        </Routes>
-      </Router>
-    </>
+    <Router>   
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/innovation" element={<Innovation />} />
+        <Route path="/purpose" element={<h1 className="text-white">Purpose</h1>} />
+        <Route path="/forum" element={<h1 className="text-white">Forum</h1>} />
+        <Route path="/people" element={<h1 className="text-white">People</h1>} />
+        <Route path="/contact" element={<h1 className="text-white">Contact</h1>} />
+      </Routes>
+      
+      <Footer />
+    </Router>
   );
 }
 

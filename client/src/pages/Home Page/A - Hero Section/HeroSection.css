@@ -1,0 +1,323 @@
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 24px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+.hero-background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+
+  /* Background Overlay */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Radial Gradient Glow */
+  .gradient-glow {
+        width: 400px; 
+        height: 300px;
+        opacity: 0.3; 
+        pointer-events: none;
+
+  }
+  
+  /* Content Container */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-image: url("../../assets/image/Gradient\ Glow.png");
+    background-size: 72%; 
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  
+  /* Hero Title */
+  .hero-title {
+    margin-top: -5rem;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .animated-molecule {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none; /* Prevent interaction */
+  }
+  
+  
+  /* Hero Text */
+  .hero-text {
+    margin-top: 16px;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Call-to-Action Button */
+  .hero-button {
+    margin-top: 24px;
+    padding: 12px 24px;
+    border: 2px solid white;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background-color: white;
+    color: #1a8e5f;
+    transform: scale(1.1);
+  }
+  
+  .hero-button:active {
+    transform: scale(0.95);
+  }
+  
+ /* Scroll Indicator */
+  @keyframes scrollDown {
+    0% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+    100% { transform: translateX(-50%) translateY(0); }
+  }
+  
+  /* Statistics Section */
+  .hero-stats {
+    position: relative;
+    z-index: 10;
+    margin-top: 40vh;
+    padding-bottom: 64px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7rem;
+}
+  
+  /* Stat Box */
+  .stat-box {
+    text-align: center;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  /* Stat Value */
+  .stat-value {
+    font-size: 7rem;
+    font-weight: medium;
+  }
+  
+  @media (min-width: 768px) {
+    .stat-value {
+      font-size: 7rem;
+    }
+  }
+  
+  /* Stat Label */
+  .stat-label {
+    font-size: 2rem;
+  }
+
+  /* 🔹 Responsive Design */
+@media (max-width: 1440px) {
+  .hero-title {
+      margin-top: -6rem;
+      font-size: 3.5rem;
+  }
+
+  .hero-text {
+      font-size: 1.4rem;
+  }
+
+  .hero-button {
+      padding: 12px 22px;
+      font-size: 1.1rem;
+  }
+
+  .hero-stats {
+      gap: 6rem;
+  }
+
+  .stat-box {
+      flex: 1 1 250px;
+  }
+
+  .stat-value {
+      font-size: 6rem;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-image: url("../../assets/image/Gradient\ Glow.png");
+    background-size: 65%; 
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+      font-size: 3rem;
+  }
+
+  .animated-molecule {
+    width: 60px;
+  }
+
+  .hero-text {
+      font-size: 1.2rem;
+      max-width: 90%;
+  }
+
+  .hero-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+  }
+
+  .hero-stats {
+      gap: 5rem;
+  }
+
+  .stat-box {
+      flex: 1 1 220px;
+  }
+
+  .stat-value {
+      font-size: 5rem;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-image: url("../../assets/image/Gradient\ Glow.png");
+    background-size: 55%; 
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+      padding: 0 16px;
+  }
+
+  .hero-title {
+      font-size: 2.5rem;
+  }
+
+  .hero-text {
+      font-size: 1.1rem;
+  }
+
+  .hero-button {
+      font-size: 0.95rem;
+      padding: 10px 18px;
+  }
+
+  .hero-stats {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+  }
+
+  .stat-box {
+      max-width: 80%;
+  }
+
+  .stat-value {
+      font-size: 4.5rem;
+  }
+
+  .stat-label {
+      font-size: 1.6rem;
+  }
+  .animated-molecule {
+    width: 50px;
+}
+
+/* Adjust positioning */
+.animated-molecule:nth-child(1) { top: 20%; left: 5%; }
+.animated-molecule:nth-child(2) { top: 10%; right: 5%; }
+.animated-molecule:nth-child(3) { bottom: 10%; left: 10%; }
+.animated-molecule:nth-child(4) { bottom: 10%; right: 10%; }
+}
+
+
+@media (max-width: 480px) {
+  .hero-title {
+      font-size: 2rem;
+  }
+
+  .hero-text {
+      font-size: 1rem;
+  }
+
+  .hero-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+  }
+
+  .stat-box {
+      max-width: 100%;
+  }
+
+  .stat-value {
+      font-size: 4rem;
+  }
+
+  .stat-label {
+      font-size: 1.4rem;
+  }
+  .animated-molecule {
+    width: 40px;
+}
+
+/* Prevent molecules from overlapping text */
+.animated-molecule:nth-child(1) { top: 20%; left: 5%; }
+.animated-molecule:nth-child(2) { top: 15%; right: 5%; }
+.animated-molecule:nth-child(3) { bottom: 15%; left: 10%; }
+.animated-molecule:nth-child(4) { bottom: 15%; right: 10%; }
+}
+
+
+  
