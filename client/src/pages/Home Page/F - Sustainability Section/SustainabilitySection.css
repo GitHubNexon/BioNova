@@ -1,0 +1,151 @@
+.sustainability-section {
+  max-width: 2400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* Video Container */
+.sustainability-top-video {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Full screen height */
+  overflow: hidden;
+}
+
+/* Video Styling */
+.sustainability-top-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gradient Overlay */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #456b8bc5, #b6d95cc7, #849c3ac7, #619e89bd, #47708dbb);
+  mix-blend-mode: multiply; /* Blends with the video */
+  pointer-events: none;
+}
+
+/* Bottom Content: Text + Right Image */
+.sustainability-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  
+}
+
+/* Left Side - Text */
+.sustainability-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.section-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-size: 4rem; /* Reduced for better balance */
+  font-weight: bold;
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+.sustainability-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* Right Side - Image */
+.sustainability-right-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.sustainability-right-image img {
+  width: 100%;
+  border-radius: 2px;
+  display: block;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .sustainability-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sustainability-bottom {
+    flex-direction: column;
+    text-align: left;
+    padding: 4rem 2rem;
+  }
+
+  .sustainability-content,
+  .sustainability-right-image {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .sustainability-text {
+    font-size: 1rem;
+  }
+
+  .sustainability-right-image img {
+    border-radius: 50px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .sustainability-top-video {
+    border-radius: 50px;
+    height: 50vh; /* Adjust video size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sustainability-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .sustainability-text {
+    font-size: 0.9rem;
+  }
+
+  .sustainability-right-image img {
+    width: 100%;
+  }
+
+  .sustainability-top-video {
+    height: 40vh; /* Smaller height for very small screens */
+  }
+}

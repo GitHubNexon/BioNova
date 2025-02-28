@@ -1,0 +1,265 @@
+.footer {
+  background-color: #e8e5e3;
+  padding: 3rem 4rem;
+}
+
+/* Top Line */
+.footer-top-line {
+  border-top: 2px solid #222;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer Content Layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Sections */
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  text-align: left; /* Left align by default */
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #7b1fa2;
+}
+
+/* Social Media Icons (Follow Us) */
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-icons svg {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icons svg:hover {
+  transform: scale(1.1);
+  color: #ff8c00;
+}
+
+/* Contact Section */
+.footer-contact {
+  font-size: 1.5rem;
+  text-align: left; /* Left-align contact details */
+} 
+
+.footer-contact p {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #0056b3;
+}
+
+/* Brand & Logo */
+.footer-brand {
+  text-align: right;
+}
+
+.footer-logo {
+  max-width: 90px;
+  margin-bottom: 0.8rem;
+}
+
+/* Gradient Divider */
+.footer-gradient-line {
+  height: 5px;
+  width: 100%;
+  max-width: 645px;
+  background: linear-gradient(90deg, #7b1fa2, #ff8c00);
+  margin-bottom: 1rem;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #222;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+/* ✅ 1440px and above */
+@media (min-width: 1440px) {
+  .footer {
+    padding: 4rem 6rem;
+  }
+
+  .footer-content {
+    max-width: 1300px;
+    gap: 3rem;
+  }
+
+  .footer-section h4 {
+    font-size: 1.4rem;
+  }
+
+  .footer-section ul li {
+    font-size: 1.1rem;
+  }
+
+  .footer-icons svg {
+    font-size: 2.2rem;
+  }
+
+  .footer-contact {
+    font-size: 1.8rem;
+  }
+
+  .footer-contact p {
+    font-size: 1.2rem;
+  }
+
+  .footer-bottom {
+    font-size: 1rem;
+  }
+}
+
+/* ✅ 1024px */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 2rem;
+  }
+
+  .footer-content {
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Keep left-aligned */
+  }
+
+  .footer-section {
+    text-align: left;
+  }
+
+  .footer-icons {
+    justify-content: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 874px) {
+  .footer-gradient-line {
+    margin: 0 auto; /* Centers it horizontally */
+  }
+  .learning-svg{
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ✅ 768px - Center All Content */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
+
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-contact p {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ✅ 480px */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-content {
+    gap: 1rem;
+  }
+
+  .footer-section h4 {
+    font-size: 1rem;
+  }
+
+  .footer-icons svg {
+    font-size: 1.5rem;
+  }
+
+  .footer-contact {
+    font-size: 1.2rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
