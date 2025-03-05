@@ -1,0 +1,267 @@
+.origin-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 300px 20%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+/* Left Content */
+.origin-content {
+    flex: 1;
+    max-width: 30%;
+    z-index: 2;
+    position: relative;
+}
+
+.origin-content h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards 0.2s;
+}
+
+.origin-content h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #000;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s ease-out forwards 0.4s;
+}
+
+.origin-content h1 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s ease-out forwards 0.6s;
+}
+
+.origin-content .description {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 350px;
+    margin-top: 7rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards 0.8s;
+}
+
+/* DNA Image */
+.origin-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.origin-image img {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    object-fit: contain;
+    animation: floatUpDown 3s ease-in-out infinite;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+
+/* Right Content */
+.origin-mission {
+    flex: 1;
+    max-width: 32%;
+    z-index: 2;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards 1s;
+}
+
+.origin-mission p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 500;
+    max-width: 350px;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔥 Responsive Design */
+@media (max-width: 1500px) {
+    .origin-image img {
+        max-width: 850px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .origin-section {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        padding: 150px 5%;
+    }
+
+    .origin-content,
+    .origin-mission {
+        max-width: 90%;
+        text-align: left;
+    }
+
+    .origin-image {
+        position: static;
+        transform: none;
+        max-width: 500%;
+        margin: 40px 0;
+    }
+
+    .origin-image img {
+        width: 150%;
+        max-width: 1100px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .origin-content h1 br {
+        display: inline;
+    }
+}
+
+@media (max-width: 768px) {
+    .origin-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .origin-content h1 {
+        font-size: 3.6rem;
+    }
+
+    .origin-content .description {
+        font-size: 1rem;
+    }
+
+    .origin-image img {
+        max-width: 600px;
+    }
+
+    .origin-mission p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 630px) {
+    .origin-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 150px 5%;
+    }
+
+    .origin-content h2 {
+        font-size: 2rem;
+    }
+
+    .origin-content h1 {
+        font-size: 3rem;
+    }
+
+    .origin-content .description {
+        font-size: 1rem;
+        margin-top: 3rem;
+    }
+
+    .origin-image img {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .origin-section {
+        padding: 80px 5%;
+    }
+
+    .origin-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .origin-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .origin-content .description {
+        font-size: 0.9rem;
+        margin-top: 2rem;
+    }
+
+    .origin-image img {
+        max-width: 400px;
+    }
+
+    .origin-mission p {
+        font-size: 0.9rem;
+    }
+}
+
+/* 📌 Extra Small Devices */
+@media (max-width: 360px) {
+    .origin-section {
+        padding: 60px 5%;
+    }
+
+    .origin-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .origin-content h1 {
+        font-size: 2rem;
+    }
+
+    .origin-content .description {
+        font-size: 0.85rem;
+        margin-top: 1.5rem;
+    }
+
+    .origin-image img {
+        max-width: 250px;
+    }
+
+    .origin-mission p {
+        font-size: 0.85rem;
+    }
+}

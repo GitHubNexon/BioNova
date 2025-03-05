@@ -29,7 +29,7 @@
   }
   
   /* Feature Card */
-  .feature-card {
+  .features-card {
     max-width: 300px;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@
   }
   
   /* Feature Icon */
-  .feature-icon {
+  .features-icon {
     width: 300px;
     height: 200px;
     display: flex;
@@ -47,7 +47,7 @@
   }
   
   /* SVG Size */
-  .feature-img {
+  .features-img {
     width: 300px;
     height: 300px;
   }
@@ -55,14 +55,14 @@
   /* Glow Effects */
   
   /* Feature Title */
-  .feature-title {
+  .features-title {
     font-size: 2rem;
     font-weight: 600;
     margin-top: 10px;
   }
   
   /* Feature Description */
-  .feature-description {
+  .features-description {
     font-size: 1.2rem;
     color: #555;
     margin-top: 1rem;
@@ -91,7 +91,7 @@
   .nav-item {
     font-size: 1rem;
     font-weight: 600;
-    color: 555;
+    color: #555;
     margin: 0 16rem;
   }
   
@@ -114,16 +114,16 @@
     gap: 12rem;
   }
 
-  .feature-img {
+  .features-img {
     width: 350px;
     height: 350px;
   }
 
-  .feature-title {
+  .features-title {
     font-size: 2.2rem;
   }
 
-  .feature-description {
+  .features-description {
     font-size: 1.4rem;
   }
 
@@ -180,11 +180,11 @@
     height: 250px;
   }
 
-  .feature-title {
+  .features-title {
     font-size: 1.8rem;
   }
 
-  .feature-description {
+  .features-description {
     font-size: 1.1rem;
   }
 
@@ -209,16 +209,16 @@
     font-size: 1.8rem;
   }
 
-  .feature-img {
+  .features-img {
     width: 200px;
     height: 200px;
   }
 
-  .feature-title {
+  .features-title {
     font-size: 1.5rem;
   }
 
-  .feature-description {
+  .features-description {
     font-size: 1rem;
   }
 

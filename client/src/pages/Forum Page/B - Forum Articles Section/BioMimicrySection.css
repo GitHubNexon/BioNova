@@ -1,0 +1,147 @@
+/* BioMimicry Section */
+.bio-mimicry-container {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 60px 5%;
+    background-color: #ececec;
+    text-align: center;
+  }
+  
+  /* Header */
+  .bio-mimicry-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .bio-mimicry-header p {
+    font-size: 1.4rem;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  /* Content Layout */
+  .bio-mimicry-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  /* Image Section */
+  .bio-mimicry-image {
+    flex: 1;
+    max-width: 48%;
+  }
+  
+  .bio-mimicry-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Articles */
+  .bio-mimicry-articles {
+    flex: 1;
+    max-width: 48%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  /* Article Cards */
+  .bio-mimicry-card {
+    background: #fff;
+    padding: 78px;
+    border-radius: 50px;
+    text-align: left;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .bio-mimicry-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .bio-mimicry-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .bio-mimicry-card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .bio-mimicry-card a {
+    font-size: 0.9rem;
+    color: #0073e6;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  /* 🔥 Responsive Design */
+  @media (max-width: 1024px) {
+    .bio-mimicry-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .bio-mimicry-image {
+      max-width: 80%;
+    }
+  
+    .bio-mimicry-articles {
+      max-width: 100%;
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .bio-mimicry-header h2 {
+      font-size: 2rem;
+    }
+  
+    .bio-mimicry-header p {
+      font-size: 1.2rem;
+    }
+  
+    .bio-mimicry-image {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .bio-mimicry-header h2 {
+      font-size: 1.8rem;
+    }
+  
+    .bio-mimicry-header p {
+      font-size: 1rem;
+    }
+  
+    .bio-mimicry-image img {
+      max-width: 100%;
+    }
+  
+    .bio-mimicry-card h4 {
+      font-size: 0.9rem;
+    }
+  
+    .bio-mimicry-card p {
+      font-size: 0.8rem;
+    }
+  
+    .bio-mimicry-card a {
+      font-size: 0.8rem;
+    }
+  }
+  

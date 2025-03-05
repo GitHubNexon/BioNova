@@ -1,12 +1,16 @@
 import React from 'react'
+import HeroForum from './A - Hero Forum/HeroForumSection'
+import BiotechSection from './B - Forum Articles Section/BiotechSection'
+import BioMimicrySection from './B - Forum Articles Section/BioMimicrySection'
+import AllArticlesSection from './C - All Articles Section/AllArticlesSection'
 
 const Forum = () => {
   return (
-    <div
-      id="forum"
-      className="flex justify-center items-center w-full min-h-screen flex-col space-x-6"
-    >
-      Services
+    <div>
+      <HeroForum />
+      <BiotechSection />
+      <BioMimicrySection />
+      <AllArticlesSection />
     </div>
   )
 }
