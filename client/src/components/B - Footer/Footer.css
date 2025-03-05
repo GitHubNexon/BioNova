@@ -116,7 +116,7 @@
 }
 
 /* Bottom Section */
-.footer-bottom {
+.footer-bottoms {
   display: flex;
   justify-content: space-between;
   border-top: 2px solid #222;
@@ -157,7 +157,7 @@
     font-size: 1.2rem;
   }
 
-  .footer-bottom {
+  .footer-bottoms {
     font-size: 1rem;
   }
 }
@@ -181,7 +181,7 @@
     justify-content: flex-start;
   }
 
-  .footer-bottom {
+  .footer-bottoms {
     flex-direction: column;
     text-align: center;
   }
@@ -227,7 +227,7 @@
     justify-content: center;
   }
 
-  .footer-bottom {
+  .footer-bottoms {
     flex-direction: column;
     text-align: center;
   }
@@ -259,7 +259,7 @@
     font-size: 0.9rem;
   }
 
-  .footer-bottom {
+  .footer-bottoms {
     font-size: 0.8rem;
   }
 }

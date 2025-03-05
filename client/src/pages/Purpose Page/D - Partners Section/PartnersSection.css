@@ -1,0 +1,200 @@
+.partners-section {
+    position: relative;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 100px 5%;
+    overflow: hidden;
+}
+
+/* Titles */
+.partners-section h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.partners-section h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.partners-section p {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 750px;
+    margin: 0 auto 15px;
+    line-height: 1.6;
+}
+
+/* Logos */
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.partners-logos img {
+    height: 60px;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+/* Decorative Elements */
+.decorations {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Gradient Bars */
+.gradient-bar {
+    position: absolute;
+    width: 150px;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #5865f2, #ff6584);
+    opacity: 0.8;
+}
+
+.gradient-bar.left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gradient-bar.right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Floating Squares */
+.square {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Square Positions */
+.square:nth-child(1) { top: 10%; left: 20%; }
+.square:nth-child(2) { top: 30%; left: 5%; }
+.square:nth-child(3) { top: 50%; left: 15%; }
+.square:nth-child(4) { top: 70%; left: 10%; }
+.square:nth-child(5) { top: 85%; left: 30%; }
+.square:nth-child(6) { top: 10%; right: 20%; }
+.square:nth-child(7) { top: 30%; right: 5%; }
+.square:nth-child(8) { top: 50%; right: 15%; }
+.square:nth-child(9) { top: 70%; right: 10%; }
+.square:nth-child(10) { top: 85%; right: 30%; }
+
+/* Responsive Design */
+
+/* Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+    .partners-section {
+        padding: 120px 8%;
+        background: radial-gradient(circle at center, #e3e3e3 10%, #f5f5f5 90%);
+    }
+
+    .gradient-bar {
+        width: 180px;
+        height: 12px;
+    }
+
+    .square {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Laptops & Desktops (1024px - 1439px) */
+@media (max-width: 1439px) {
+    .partners-section {
+        padding: 90px 6%;
+        background: radial-gradient(circle at top, #eaeaea 20%, #f5f5f5 80%);
+    }
+
+    .gradient-bar {
+        width: 160px;
+    }
+
+    .square {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+    .partners-section {
+        padding: 80px 5%;
+        background: linear-gradient(180deg, #f0f0f0, #f5f5f5);
+    }
+
+    .gradient-bar {
+        width: 140px;
+    }
+
+    .square {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Mobile (480px - 767px) */
+@media (max-width: 767px) {
+    .partners-section {
+        padding: 60px 5%;
+        background: linear-gradient(180deg, #ffffff, #f5f5f5);
+    }
+
+    .partners-section h2 {
+        font-size: 2rem;
+    }
+
+    .gradient-bar {
+        width: 120px;
+    }
+
+    .square {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Small Phones (320px - 479px) */
+@media (max-width: 479px) {
+    .partners-section {
+        padding: 50px 5%;
+        background: linear-gradient(180deg, #ffffff, #f8f8f8);
+    }
+
+    .partners-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .gradient-bar {
+        width: 100px;
+    }
+
+    .square {
+        width: 6px;
+        height: 6px;
+    }
+}

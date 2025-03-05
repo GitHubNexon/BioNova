@@ -62,16 +62,16 @@ const FeaturesSection = () => {
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="feature-card"
+            className="features-card"
             initial={{ opacity: 0, scale: 0.8, y: 50 }}
             animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.8, y: inView ? 0 : 50 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <div className={`feature-icon ${feature.glowClass}`}>
+            <div className={`features-icon ${feature.glowClass}`}>
               <img src={feature.icon} alt={feature.title} className="feature-img" />
             </div>
-            <h3 className="feature-title">{feature.title}</h3>
-            <p className="feature-description">{feature.description}</p>
+            <h3 className="features-title">{feature.title}</h3>
+            <p className="features-description">{feature.description}</p>
           </motion.div>
         ))}
       </div>

@@ -1,0 +1,478 @@
+/* Section Layout */
+.genetic-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 80px 20%;
+    background-color: #f4f2f0;
+    position: relative;
+}
+
+/* Left Content */
+.genetic-content {
+    max-width: 600px;
+}
+
+.genetic-title {
+    color: #222;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.genetic-description {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.genetic-list {
+    font-size: 1.1rem;
+    color: #333;
+    list-style: none;
+    padding: 0;
+}
+
+.genetic-list li {
+    margin-bottom: 10px;
+}
+
+/* Right Image */
+.genetic-image-container {
+    position: relative;
+    width: 600px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* CRISPR Molecule Image */
+.genetic-image {
+    width: 150%;
+    max-width: 800px;
+    height: auto;
+    position: relative;
+    z-index: 1;  /* Lower than orbs */
+    transform: translateX(10%);
+}
+
+/* Floating Animation */
+.floating-animation {
+    animation: floatImage 6s infinite ease-in-out alternate;
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0px) translateX(10%) scale(1); }
+    50% { transform: translateY(-15px) translateX(12%) scale(1.02); }
+    100% { transform: translateY(10px) translateX(8%) scale(1); }
+}
+
+/* Gradient Glow Effect */
+.genetic-gradient-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 140, 180, 0.5), rgba(180, 140, 255, 0.2));
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 0;
+    right: 15%;
+}
+
+/* Genetic Orbs */
+.genetic-orbs {
+    position: absolute;
+    width: 80%; /* Reduce size */
+    max-width: 400px; /* Smaller than before */
+    bottom: 5%; /* Adjusted to keep it aligned */
+    right: 1%;
+    pointer-events: none;
+    animation: fadeIn 1.5s ease-in-out;
+    z-index: 2;
+}
+
+/* Ensure Orbs are Above */
+.on-top {
+    z-index: 2;  /* Higher than CRISPR image */
+}
+
+/* Floating Animation */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px); /* Moves up */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply Floating Animation */
+.floating-animation {
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* Ensure Orbs Also Float */
+.genetic-orbs {
+    animation: floatUpDown 4s ease-in-out infinite; /* Different timing for variation */
+}
+
+/* Ensure the Orbs Stay on Top */
+.on-top {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+
+/* Fade In Effect */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive Design */
+/* Large Screens (1440px) */
+@media (max-width: 1625px) {
+    .genetic-section {
+        gap: 3rem; /* Reduce spacing */
+        padding: 70px 9%;
+    }
+
+    .genetic-title {
+        font-size: 2.8rem;
+    }
+
+    .genetic-description {
+        font-size: 1.2rem;
+    }
+
+    .genetic-image-container {
+        width: 500px;
+    }
+
+    .genetic-image {
+        max-width: 750px;
+    }
+
+    .genetic-orbs {
+        max-width: 600px;
+    }
+
+    .genetic-gradient-glow {
+        width: 450px;
+        height: 450px;
+        filter: blur(50px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .genetic-section {
+        gap: 3rem;
+        padding: 60px 8%;
+    }
+
+    .genetic-title {
+        font-size: 2.8rem;
+    }
+
+    .genetic-description {
+        font-size: 1.1rem;
+    }
+
+    .genetic-image-container {
+        width: 100%;
+    }
+
+    .genetic-image {
+        max-width: 550px;
+        transform: translateX(5%);
+    }
+
+    .genetic-orbs {
+        max-width: 600px;
+        top: -5%;
+    }
+
+    .genetic-gradient-glow {
+        width: 500px;
+        height: 500px;
+        filter: blur(45px);
+        right: -5%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .genetic-section {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .genetic-content {
+        max-width: 100%;
+    }
+
+    .genetic-title {
+        font-size: 2.5rem;
+    }
+
+    .genetic-description {
+        font-size: 1.1rem;
+    }
+
+    .genetic-list {
+        font-size: 1rem;
+    }
+
+    .genetic-image {
+        max-width: 500px;
+        transform: none;
+    }
+
+    .genetic-orbs {
+        max-width: 400px; 
+        top: 0%;
+        right: 0;
+    }
+
+    .genetic-gradient-glow {
+        width: 400px;
+        height: 400px;
+        filter: blur(40px);
+        right: 0;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .genetic-section {
+        padding: 50px 3%;
+    }
+
+    .genetic-title {
+        font-size: 2rem;
+    }
+
+    .genetic-description {
+        font-size: 1rem;
+    }
+
+    .genetic-list {
+        font-size: 0.95rem;
+    }
+
+    .genetic-image {
+        max-width: 550px;
+    }
+    .genetic-image-container {
+        width: 210%;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        position: relative;
+        margin-bottom: 20px; /* Add spacing below images */
+    }
+
+    .genetic-orbs {
+        max-width: 350px; 
+        top: 0%;
+    }
+
+    .genetic-gradient-glow {
+        width: 500px;
+        height: 500px;
+        filter: blur(30px);
+        position: absolute;
+        top: 10;
+        left: 40%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 610px) {
+    .genetic-section {
+        flex-direction: column-reverse; /* Moves images above text */
+        align-items: left;
+        text-align: left;
+    }
+
+    .genetic-content {
+        max-width: 100%;
+    }
+
+    .genetic-title {
+        font-size: 1.8rem;
+    }
+
+    .genetic-description {
+        font-size: 0.95rem;
+    }
+
+    .genetic-list {
+        font-size: 0.9rem;
+    }
+
+    /* Make images smaller and centered */
+    .genetic-image-container {
+        width: 80%;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        position: relative;
+        margin-bottom: 20px; /* Add spacing below images */
+    }
+
+    .genetic-image {
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .genetic-orbs {
+        max-width: 300px; /* Keep it slightly smaller */
+        position: absolute;
+        top: 0;
+        left: 30%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .genetic-gradient-glow {
+        width: 500px;
+        height: 500px;
+        filter: blur(30px);
+        position: absolute;
+        top: 10;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 425px) {
+    .genetic-section {
+        flex-direction: column-reverse; /* Moves images above text */
+        align-items: left;
+        text-align: left;
+    }
+
+    .genetic-content {
+        max-width: 100%;
+    }
+
+    .genetic-title {
+        font-size: 1.8rem;
+    }
+
+    .genetic-description {
+        font-size: 0.95rem;
+    }
+
+    .genetic-list {
+        font-size: 0.9rem;
+    }
+
+    /* Make images smaller and centered */
+    .genetic-image-container {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        position: relative;
+        margin-bottom: 20px; /* Add spacing below images */
+    }
+
+    .genetic-image {
+        max-width: 500px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .genetic-orbs {
+        max-width: 280px; /* Keep it slightly smaller */
+        position: absolute;
+        top: 0;
+        left: 20%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .genetic-gradient-glow {
+        width: 350px;
+        height: 350px;
+        filter: blur(30px);
+        position: absolute;
+        top: 10 ;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 375px) {
+    .genetic-section {
+        flex-direction: column-reverse; /* Moves images above text */
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .genetic-content {
+        max-width: 100%;
+    }
+
+    .genetic-title {
+        font-size: 1.8rem;
+    }
+
+    .genetic-description {
+        font-size: 0.95rem;
+    }
+
+    .genetic-list {
+        font-size: 0.9rem;
+    }
+
+    /* Make images smaller and aligned properly */
+    .genetic-image-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
+        margin-bottom: 20px; /* Space below images */
+    }
+
+    .genetic-image {
+        max-width: 500px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .genetic-orbs {
+        max-width: 280px; /* Slightly smaller for better scaling */
+        position: absolute;
+        top: 0;
+        left: 20%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .genetic-gradient-glow {
+        width: 350px;
+        height: 350px;
+        filter: blur(30px);
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

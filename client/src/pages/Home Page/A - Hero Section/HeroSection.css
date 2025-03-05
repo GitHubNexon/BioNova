@@ -9,8 +9,7 @@
     text-align: center;
     color: white;
     padding: 0 24px;
-    background-size: cover;
-    background-position: center;
+
   }
   
 .hero-background {
@@ -37,6 +36,7 @@
         height: 300px;
         opacity: 0.3; 
         pointer-events: none;
+        
 
   }
   

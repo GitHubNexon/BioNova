@@ -1,0 +1,120 @@
+/* All Articles Section */
+.all-articles-container {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 60px 5%;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  /* Header */
+  .all-articles-header p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .all-articles-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 40px;
+  }
+  
+  /* Articles Grid */
+  .all-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+  
+  /* Article Card */
+  .all-articles-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .all-articles-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .all-articles-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .all-articles-content {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .all-articles-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .all-articles-content p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .all-articles-content a {
+    font-size: 0.9rem;
+    color: #0073e6;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  /* 🔥 Responsive Design */
+  @media (max-width: 1024px) {
+    .all-articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .all-articles-header h2 {
+      font-size: 2rem;
+    }
+  
+    .all-articles-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .all-articles-card {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .all-articles-header h2 {
+      font-size: 1.8rem;
+    }
+  
+    .all-articles-content h4 {
+      font-size: 0.9rem;
+    }
+  
+    .all-articles-content p {
+      font-size: 0.8rem;
+    }
+  
+    .all-articles-content a {
+      font-size: 0.8rem;
+    }
+  }
+  

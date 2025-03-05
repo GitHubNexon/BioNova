@@ -1,0 +1,274 @@
+/* Section Layout */
+.agri-bio-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 80px 20%;
+    background-color: #f4f2f0;
+    position: relative;
+}
+
+/* Left Content */
+.agri-bio-content {
+    max-width: 600px;
+}
+
+.agri-bio-title {
+    color: #222;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.agri-bio-description {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.agri-bio-list {
+    font-size: 1.1rem;
+    color: #333;
+    list-style: none;
+    padding: 0;
+}
+
+.agri-bio-list li {
+    margin-bottom: 10px;
+}
+
+/* Right Image */
+.agri-bio-image-container {
+    position: relative;
+    width: 600px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Main Image */
+.agri-bio-image {
+    width: 150%;
+    max-width: 600px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    transform: translateX(10%);
+}
+
+/* Floating Animation */
+.floating-animation {
+    animation: floatImage 6s infinite ease-in-out alternate;
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0px) translateX(10%) scale(1); }
+    50% { transform: translateY(-15px) translateX(12%) scale(1.02); }
+    100% { transform: translateY(10px) translateX(8%) scale(1); }
+}
+
+/* Gradient Glow Effect */
+.agri-bio-gradient-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #485e23a2, #372c2871);
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 0;
+    right: 15%;
+}
+
+/* Decorative Orbs */
+.agri-bio-orbs {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    bottom: -10%;
+    right: 1%;
+    pointer-events: none;
+    animation: fadeIn 1.5s ease-in-out;
+    z-index: 2;
+}
+
+/* Ensure Orbs are Above */
+.on-top {
+    z-index: 2;
+}
+
+/* Floating Animation */
+@keyframes floatUpDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.agri-bio-orbs {
+    animation: floatUpDown 4s ease-in-out infinite;
+}
+
+/* Fade In Effect */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 1625px) {
+    .agri-bio-section {
+        padding: 60px 8%;
+    }
+
+    .agri-bio-title {
+        font-size: 2.8rem;
+    }
+
+    .agri-bio-description {
+        font-size: 1.1rem;
+    }
+
+    .agri-bio-image-container {
+        width: 100%;
+    }
+
+    .agri-bio-image {
+        max-width: 550px;
+        transform: translateX(5%);
+    }
+
+    .agri-bio-orbs {
+        max-width: 500px;
+        top: -5%;
+    }
+
+    .agri-bio-gradient-glow {
+        width: 500px;
+        height: 500px;
+        filter: blur(45px);
+        right: -5%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .agri-bio-section {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .agri-bio-title {
+        font-size: 2.5rem;
+    }
+
+    .agri-bio-description {
+        font-size: 1.1rem;
+    }
+
+    .agri-bio-list {
+        font-size: 1rem;
+    }
+
+    .agri-bio-image {
+        max-width: 500px;
+    }
+
+    .agri-bio-orbs {
+        max-width: 400px; 
+        top: 10%;
+    }
+
+    .agri-bio-gradient-glow {
+        width: 400px;
+        height: 400px;
+        filter: blur(40px);
+        right: 0;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .agri-bio-section {
+        padding: 50px 3%;
+    }
+
+    .agri-bio-title {
+        font-size: 2rem;
+    }
+
+    .agri-bio-description {
+        font-size: 1rem;
+    }
+
+    .agri-bio-list {
+        font-size: 0.95rem;
+    }
+
+    .agri-bio-image {
+        max-width: 550px;
+    }
+}
+
+
+    /* Small Mobile Screens */
+@media (max-width: 610px) {
+    .agri-bio-section {
+        flex-direction: column-reverse; /* Moves images above text */
+        align-items: left;
+        text-align: left;
+    }
+
+    .agri-bio-content {
+        max-width: 100%;
+    }
+
+    .agri-bio-title {
+        font-size: 1.8rem;
+    }
+
+    .agri-bio-description {
+        font-size: 0.95rem;
+    }
+
+    .agri-bio-list {
+        font-size: 0.9rem;
+    }
+
+    /* Make images smaller and centered */
+    .agri-bio-image-container {
+        width: 80%;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        position: relative;
+        margin-bottom: 20px; /* Add spacing below images */
+    }
+
+    .agri-bio-image {
+        max-width: 500px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .agri-bio-orbs {
+        max-width: 300px; /* Keep it slightly smaller */
+        position: absolute;
+        top: 
+        0;
+        left: 0%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .agri-bio-gradient-glow {
+        width: 400px;
+        height: 400px;
+        filter: blur(30px);
+        position: absolute;
+        top: 10;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
