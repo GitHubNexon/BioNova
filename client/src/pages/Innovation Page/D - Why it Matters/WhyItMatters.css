@@ -149,6 +149,43 @@
     }
 }
 
+@media (max-width: 834px) {
+    .why-matters {
+        flex-direction: column;
+        text-align: center;
+        padding: 6rem 8%;
+    }
+
+    .why-content {
+        max-width: 100%;
+        padding: 4rem 6%;
+    }
+
+    .why-title {
+        font-size: 2.3rem;
+    }
+
+    .why-description {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    .join-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .why-image-container {
+        width: 100%;
+        padding: 3rem 0;
+    }
+
+    .why-image {
+        width: 90%;
+        height: auto;
+    }
+}
+
 /* Mobile (768px) */
 @media (max-width: 768px) {
     .why-matters {

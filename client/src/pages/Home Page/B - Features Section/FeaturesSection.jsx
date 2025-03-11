@@ -78,7 +78,7 @@ const FeaturesSection = () => {
 
       {/* Description Section */}
       <motion.p
-        className="features-description"
+        className="features-description-below"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
         transition={{ duration: 0.5, delay: 0.4 }}

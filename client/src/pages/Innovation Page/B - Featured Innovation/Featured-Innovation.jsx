@@ -38,7 +38,7 @@ const FeaturedInnovation = () => {
     <section ref={ref} className="featured-innovation-section">
       {/* Heading */}
       <motion.h2
-        className="featured-title"
+        className="features-title"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -47,11 +47,11 @@ const FeaturedInnovation = () => {
       </motion.h2>
 
       {/* Features Grid */}
-      <div className="featured-grid">
+      <div className="features-grid">
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="featured-card"
+            className="features-card"
             initial={{ opacity: 0, scale: 0.8, y: 50 }}
             animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.8, y: inView ? 0 : 50 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -59,15 +59,15 @@ const FeaturedInnovation = () => {
             <div className={`feature-icon ${feature.glowClass}`}>
               <img src={feature.icon} alt={feature.title} className="feature-img" />
             </div>
-            <h3 className="featured-title">{feature.title}</h3>
-            <p className="featured-description">{feature.description}</p>
+            <h3 className="features-title">{feature.title}</h3>
+            <p className="features-description">{feature.description}</p>
           </motion.div>
         ))}
       </div>
 
       {/* Description Section */}
       <motion.p
-        className="featured-description"
+        className="features-description-below"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
         transition={{ duration: 0.5, delay: 0.4 }}

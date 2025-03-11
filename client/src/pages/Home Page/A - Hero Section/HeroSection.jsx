@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation, useSpring } from "framer-motion";
+import {useNavigate} from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import HeroBG from "../../../assets/image/HeroBG.png";
 import Gradient from "../../../assets/image/Gradient Glow.png";
@@ -70,20 +71,26 @@ const HeroSection = () => {
     { value: 100, label: "Commitment to Sustainability", suffix: "%" },
   ];
 
+  const navigate = useNavigate(); // ✅ Initialize navigate
+
+  const handleNavigate = () => {
+    navigate("/innovation"); // ✅ Change this to the correct route
+  };
+
   return (
-    <section className="hero-section">
+    <section id="hero-section" className="hero-section">
       {/* Background */}
       <div className="hero-background" style={{ backgroundImage: `url(${HeroBG})` }}></div>
 
       <motion.div
-        className="hero-overlay"
+        className="home-hero-overlay"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       ></motion.div>
 
       <motion.div
-        className="gradient-glow"
+        className="home-gradient-glow"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -150,6 +157,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.8 }}
+          onClick={handleNavigate}
         >
           Innovation
         </motion.button>

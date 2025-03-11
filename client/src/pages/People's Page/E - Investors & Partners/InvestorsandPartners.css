@@ -1,0 +1,164 @@
+/* 🌟 Partners Section */
+.partners-section {
+  text-align: center;
+  padding: 80px 40px;
+  background: linear-gradient(to bottom, white, pink);
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🎚 HR Line */
+.title-hr {
+  width: 1800px;
+  height: 4px;
+  max-width: 80%;
+  background-color: #222;
+  border: none;
+  margin: 0 auto 6rem auto;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+/* 📢 Title */
+.partners-section h2 {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8rem;
+}
+
+/* 🎠 Logo Carousel Wrapper */
+.logos-wrapper {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  white-space: nowrap;
+}
+
+/* 🔄 Infinite Scrolling Container */
+.logos-slide {
+  display: flex;
+  align-items: center;
+  gap: 80px; /* Adjust space between logos */
+  animation: infiniteScroll 15s linear infinite;
+  width: fit-content;
+}
+
+/* 🏢 Logos */
+.logo {
+  height: 80px;
+  flex-shrink: 0;
+}
+
+/* 🎬 Infinite Scrolling Animation */
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ⏸ Pause Animation on Hover */
+.logos-wrapper:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+/* 📏 Responsive Design */
+
+/* 🔹 Large Screens */
+@media (max-width: 1440px) {
+  .partners-section h2 {
+    font-size: 5rem;
+    margin-bottom: 6rem;
+  }
+  .logo {
+    height: 70px;
+  }
+  .logos-slide {
+    gap: 70px;
+    animation-duration: 18s;
+  }
+}
+
+/* 🔹 Laptops & Tablets (Landscape) */
+@media (max-width: 1024px) {
+  .partners-section h2 {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
+  .title-hr {
+    width: 60%;
+    margin-bottom: 5rem;
+  }
+  .logo {
+    height: 60px;
+  }
+  .logos-slide {
+    gap: 60px;
+    animation-duration: 18s;
+  }
+}
+
+/* 🔹 Medium Tablets (iPads, etc.) */
+@media (max-width: 834px) {
+  .partners-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+  }
+  .title-hr {
+    width: 50%;
+    margin-bottom: 4rem;
+  }
+  .logo {
+    height: 55px;
+  }
+  .logos-slide {
+    gap: 50px;
+    animation-duration: 18s;
+  }
+}
+
+/* 🔹 Tablets in Portrait */
+@media (max-width: 768px) {
+  .partners-section h2 {
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+  }
+  .title-hr {
+    width: 40%;
+    margin-bottom: 3rem;
+  }
+  .logo {
+    height: 50px;
+  }
+  .logos-slide {
+    gap: 40px;
+    animation-duration: 18s;
+  }
+}
+
+/* 🔹 Mobile Devices */
+@media (max-width: 480px) {
+  .partners-section {
+    padding: 50px 20px;
+  }
+  .partners-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .title-hr {
+    width: 30%;
+    margin-bottom: 2rem;
+  }
+  .logo {
+    height: 40px;
+  }
+  .logos-slide {
+    gap: 30px;
+    animation-duration: 8s;
+  }
+}

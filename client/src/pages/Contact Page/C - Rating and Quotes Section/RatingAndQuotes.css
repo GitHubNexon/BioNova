@@ -1,0 +1,149 @@
+.rating-and-quotes-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* 🔹 Background Image */
+.static-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/image/ratingandquotes.png") no-repeat center center;
+    background-size: cover;
+    z-index: -2;
+}
+
+/* 🔹 Gradient Glow Effect */
+.gradient-glow {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: url("../../../assets/image/Gradient-glow-people.png") no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+/* 🔹 Text Content */
+.rating-and-quotes-content {
+    max-width: 700px;
+    color: white;
+    z-index: 2;
+}
+
+/* Subtitle */
+.rating-and-quotes-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+/* Quote Text */
+.rating-and-quotes-text {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 6rem;
+}
+
+/* 🔹 Pagination Dots */
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem; 
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: rgb(212, 57, 135);
+    transform: scale(1.2);
+}
+
+/* 📱 Responsive Design Adjustments */
+
+/* ✅ 1440px (Large Screens) */
+@media (max-width: 1440px) {
+    .rating-and-quotes-subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+    .rating-and-quotes-text {
+        font-size: 2.8rem;
+        margin-bottom: 5rem;
+    }
+}
+
+/* ✅ 1024px (Laptops & Small Desktops) */
+@media (max-width: 1024px) {
+    .rating-and-quotes-subtitle {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+    .rating-and-quotes-text {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+}
+
+/* ✅ 834px (Tablets - iPad Pro) */
+@media (max-width: 834px) {
+    .rating-and-quotes-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 1.8rem;
+    }
+    .rating-and-quotes-text {
+        font-size: 2.2rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
+/* ✅ 768px (Tablets - iPad Mini, Small Tablets) */
+@media (max-width: 768px) {
+    .rating-and-quotes-subtitle {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+    .rating-and-quotes-text {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/* ✅ 480px (Mobile Phones) */
+@media (max-width: 480px) {
+    .rating-and-quotes-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .rating-and-quotes-text {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+    .dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+    }
+}

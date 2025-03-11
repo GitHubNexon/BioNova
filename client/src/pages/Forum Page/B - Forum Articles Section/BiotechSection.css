@@ -1,164 +1,255 @@
 /* Biotech Section */
 .biotech-section {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 80px 5%;
+  text-align: center;
+}
+
+/* Header */
+.biotech-header {
+  text-align: left;
+  max-width: 1800px;
+  margin-bottom: 20px;
+  position: relative; /* Needed for ::before positioning */
+}
+
+.biotech-header h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+/* Header Line (Styled like .all-articles-headers::before) */
+.biotech-headers::before {
+  content: "";
+  display: block;
+  width: 100%; /* Fluid width */
+  max-width: 1800px; /* Prevents it from getting too big */
+  height: 3px;
+  background-color: #222;
+  margin-bottom: 15px;
+  transition: width 0.3s ease;
+  border-radius: 20px;
+}
+
+.biotech-header h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.biotech-header p {
+  font-size: 1.8rem;
+  color: #555;
+  font-weight: 500;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Content Layout */
+.biotech-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+/* Image Section */
+.biotech-image {
+  flex: 1;
+  max-width: 48%;
+}
+
+.biotech-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Articles Section */
+.biotech-articles {
+  flex: 1;
+  max-width: 48%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Article Cards */
+.biotech-card {
+  background: #fff;
+  padding: 60px;
+  border-radius: 40px;
+  text-align: left;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.biotech-card:hover {
+  transform: translateY(-5px);
+}
+
+.biotech-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.biotech-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.biotech-card a {
+  font-size: 1rem;
+  color: #0073e6;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* 🔥 Responsive Design */
+
+/* 1440px */
+@media (max-width: 1440px) {
+  .biotech-section {
+    padding: 70px 6%;
+  }
+
+  .biotech-headers::before {
     width: 100%;
-    max-width: 2400px;
-    margin: 0 auto;
-    padding: 60px 4%;
-    background-color: #ececec;
+    max-width: 1400px;
+  }
+
+  .biotech-content {
+    gap: 25px;
+  }
+
+  .biotech-articles {
+    max-width: 50%;
+  }
+
+  .biotech-card {
+    padding: 50px;
+  }
+}
+
+/* 1024px */
+@media (max-width: 1024px) {
+  .biotech-content {
+    flex-direction: column;
     text-align: center;
   }
-  
-  /* Header */
-  .biotech-header h3 {
-    font-size: 1rem;
-    color: #333;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+
+  .biotech-headers::before {
+    max-width: 900px;
   }
-  
-  .biotech-header hr {
-    width: 100%;
-    max-width: 400px;
-    height: 2px;
-    background-color: #333;
-    border: none;
-    margin: 10px auto;
-  }
-  
-  .biotech-header h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #222;
-    margin-top: 10px;
-  }
-  
-  .biotech-header p {
-    font-size: 1.4rem;
-    color: #555;
-    font-weight: 500;
-  }
-  
-  /* Content Layout */
-  .biotech-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 40px;
-  }
-  
-  /* Image Section */
+
   .biotech-image {
-    flex: 1;
-    max-width: 48%;
+    max-width: 90%;
+    margin-bottom: 2rem;
   }
-  
-  .biotech-image img {
-    width: 90%;
-    height: auto;
-    border-radius: 50px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Articles */
+
   .biotech-articles {
-    flex: 1;
-    max-width: 50%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    max-width: 90%;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 834px */
+@media (max-width: 834px) {
+  .biotech-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .biotech-header p {
+    font-size: 1.3rem;
+  }
+
+  .biotech-headers::before {
+    max-width: 700px;
+  }
+
+  .biotech-card {
+    padding: 45px;
+  }
+
+  .biotech-image {
+    max-width: 95%;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .biotech-header h2 {
+    font-size: 2rem;
+  }
+
+  .biotech-header p {
+    font-size: 1.2rem;
+  }
+
+  .biotech-headers::before {
+    max-width: 600px;
+  }
+
+  .biotech-content {
+    flex-direction: column;
+  }
+
+  .biotech-image {
+    max-width: 100%;
+  }
+
+  .biotech-articles {
+    max-width: 100%;
+    grid-template-columns: 1fr;
     gap: 15px;
   }
-  
-  /* Article Cards */
+}
+
+/* 480px */
+@media (max-width: 450px) {
+  .biotech-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .biotech-header p {
+    font-size: 1rem;
+  }
+
+  .biotech-headers::before {
+    max-width: 500px;
+  }
+
+  .biotech-image img {
+    max-width: 100%;
+  }
+
   .biotech-card {
-    background: #fff;
-    padding: 82px;
-    border-radius: 40px;
-    text-align: left;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    padding: 35px;
+    border-radius: 30px;
   }
-  
-  .biotech-card:hover {
-    transform: translateY(-5px);
-  }
-  
+
   .biotech-card h4 {
     font-size: 1rem;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 10px;
   }
-  
+
   .biotech-card p {
     font-size: 0.9rem;
-    color: #555;
   }
-  
+
   .biotech-card a {
     font-size: 0.9rem;
-    color: #0073e6;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
   }
-  
-  /* 🔥 Responsive Design */
-  @media (max-width: 1024px) {
-    .biotech-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .biotech-image {
-      max-width: 80%;
-    }
-  
-    .biotech-articles {
-      max-width: 100%;
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .biotech-header h2 {
-      font-size: 2rem;
-    }
-  
-    .biotech-header p {
-      font-size: 1.2rem;
-    }
-  
-    .biotech-image {
-      max-width: 90%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .biotech-header h2 {
-      font-size: 1.8rem;
-    }
-  
-    .biotech-header p {
-      font-size: 1rem;
-    }
-  
-    .biotech-image img {
-      max-width: 100%;
-    }
-  
-    .biotech-card h4 {
-      font-size: 0.9rem;
-    }
-  
-    .biotech-card p {
-      font-size: 0.8rem;
-    }
-  
-    .biotech-card a {
-      font-size: 0.8rem;
-    }
-  }
-  
+}

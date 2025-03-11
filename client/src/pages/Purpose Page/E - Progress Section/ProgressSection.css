@@ -1,14 +1,13 @@
 .progress-section {
     text-align: center;
-    background-color: #ece8e6;
-    padding: 100px 5%;
+    background: linear-gradient(to left, #e6ee49c2, #84af5ad0, #a66d81d3, #8f91bde3, #9371b2e7 );    padding: 100px 5%;
 }
 
 /* Heading */
 .progress-section h2 {
     font-size: 3rem;
     font-weight: 700;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 15px;
     opacity: 0; /* Ensures animation starts from hidden state */
 }
@@ -16,7 +15,7 @@
 /* Paragraph */
 .progress-section p {
     font-size: 1.3rem;
-    color: #444;
+    color: #ffffff;
     max-width: 750px;
     margin: 0 auto 40px;
     line-height: 1.8;
@@ -37,7 +36,7 @@
     padding: 14px 28px;
     border-radius: 30px;
     background: transparent;
-    color: #333;
+    color: #ffffff;
     border: 2px solid transparent;
     position: relative;
     cursor: pointer;

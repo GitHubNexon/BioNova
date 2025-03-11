@@ -1,0 +1,99 @@
+.leaderships-section {
+    padding: 60px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.leaderships-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    justify-content: center;
+    align-items: left;
+    max-width: 1600px;
+    width: 100%;
+}
+
+/* Leader Card */
+.leaders-card {
+    text-align: center;
+    max-width: 620px;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.leaders-card:hover {
+    transform: scale(1.02);
+}
+
+.leaders-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.leaders-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.leaders-role {
+    font-size: 1rem;
+    color: #444;
+}
+
+.leaders-plus {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-top: 8px;
+}
+
+/* ** Responsive Styles ** */
+
+/* 1024px - 3 Columns */
+@media (max-width: 1024px) {
+    .leaderships-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+}
+
+/* 768px - 2 Columns */
+@media (max-width: 768px) {
+    .leaderships-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .leaders-card {
+        max-width: 90%;
+        margin: auto;
+        transition: none;
+    }
+}
+
+/* 480px - 1 Column */
+@media (max-width: 480px) {
+    .leaderships-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .leaders-card {
+        max-width: 100%;
+        padding: 15px;
+        transition: none;
+    }
+    .leaders-name {
+        font-size: 1.1rem; /* Decrease font size for mobile */
+    }
+
+    .leaders-role {
+        font-size: 0.9rem;
+    }
+}

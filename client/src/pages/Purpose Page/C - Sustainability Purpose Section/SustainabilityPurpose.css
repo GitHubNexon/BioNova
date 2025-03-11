@@ -88,6 +88,16 @@
 
 /* Responsive Design */
 
+@media (max-width: 1440px) {
+  .section-purpose-title {
+    font-size: 3.5rem;
+  }
+
+  .sustainability-purpose-text {
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .section-purpose-subtitle {
     font-size: 1rem;
@@ -105,6 +115,39 @@
     margin-top: 6rem;
   }
   
+}
+
+@media (max-width: 834px) {
+  .sustainability-purpose-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .sustainability-purpose-content,
+  .sustainability-purpose-right-image {
+    max-width: 100%;
+  }
+
+  .section-purpose-title {
+    font-size: 1.9rem;
+  }
+
+  .sustainability-purpose-text {
+    font-size: 0.8rem;
+  }
+
+  .sustainability-purpose-right-image img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .sustainability-top-video {
+    height: 35vh;
+  }
+  .sustainability-footer-text {
+    font-size: 2rem; /* Smallest size for mobile */
+    margin-top: 3rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -140,7 +183,7 @@
   }
   .sustainability-footer-text {
     font-size: 3rem; /* Reduce further for tablets */
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 }
 
@@ -165,7 +208,7 @@
     height: 40vh; /* Smaller height for very small screens */
   }
   .sustainability-footer-text {
-    font-size: 2rem; /* Smallest size for mobile */
-    margin-top: 3rem;
+    font-size: 1.5rem; /* Smallest size for mobile */
+    margin-top: 1rem;
   }
 }

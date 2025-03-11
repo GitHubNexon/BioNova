@@ -1,11 +1,17 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
+import {useNavigate} from "react-router-dom";
 import { useRef } from "react";
 import "./ProgressSection.css"; // Import the CSS file
 
 const ProgressSection = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { triggerOnce: false });
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/contact");
+  }
 
   return (
     <section className="progress-section" ref={sectionRef}>
@@ -35,15 +41,10 @@ const ProgressSection = () => {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
       >
+  
         <motion.button
           className="gradient-button"
-          whileHover={{ scale: 1.05, boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.15)" }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Partner With Us
-        </motion.button>
-        <motion.button
-          className="gradient-button"
+          onClick={handleNavigate}
           whileHover={{ scale: 1.05, boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.15)" }}
           whileTap={{ scale: 0.95 }}
         >

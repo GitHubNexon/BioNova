@@ -42,8 +42,7 @@ const BiotechSection = () => {
     >
       <div className="biotech-header">
         <h3>LEARN WITH US</h3>
-        <hr />
-        <h2>ISSUE 01.01</h2>
+        <h2 className="biotech-headers">ISSUE 01.01</h2>
         <p>Frontiers of Biotechnology</p>
       </div>
 

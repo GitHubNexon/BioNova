@@ -12,7 +12,7 @@ const WhyItMatters = () => {
         <p className="why-description">
           At BioNova Solutions, we bridge the gap between science and real-world impact, ensuring that biotechnology transforms lives, industries, and the environment.
         </p>
-        <a href="#join" className="join-button">Join Us</a>
+        <a href="#contact" className="join-button">Join Us</a>
       </div>
 
       {/* Right Side: Image + Quotes */}

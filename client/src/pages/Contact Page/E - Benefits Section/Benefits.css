@@ -1,0 +1,133 @@
+.benefits-words-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: #f8f5f5;
+}
+
+.benefits-words-subtitle {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.benefits-words-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.benefits-words-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.benefits-word-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    max-width: 250px;
+}
+
+.benefits-icon-bg {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: 0;
+}
+
+.benefits-word-icon {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.benefits-word-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.benefits-word-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Design */
+
+/* 1440px and above */
+@media (min-width: 1440px) {
+    .benefits-words-title {
+        font-size: 3.5rem;
+    }
+    .benefits-words-grid {
+        gap: 80px;
+    }
+}
+
+/* 1024px to 1439px */
+@media (max-width: 1439px) {
+    .benefits-words-title {
+        font-size: 3rem;
+    }
+    .benefits-words-grid {
+        gap: 50px;
+    }
+}
+
+/* 834px to 1023px */
+@media (max-width: 1023px) {
+    .benefits-words-title {
+        font-size: 2.8rem;
+    }
+    .benefits-words-grid {
+        gap: 40px;
+    }
+}
+
+/* 768px to 833px */
+@media (max-width: 833px) {
+    .benefits-words-title {
+        font-size: 2.6rem;
+    }
+    .benefits-words-grid {
+        flex-direction: column;
+        gap: 100px;
+    }
+}
+
+/* 480px to 767px */
+@media (max-width: 767px) {
+    .benefits-words-title {
+        font-size: 2.4rem;
+    }
+    .benefits-words-grid {
+        flex-direction: column;
+        gap: 100px;
+    }
+}
+
+/* 480px and below */
+@media (max-width: 479px) {
+    .benefits-words-title {
+        font-size: 2.2rem;
+    }
+    .benefits-words-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

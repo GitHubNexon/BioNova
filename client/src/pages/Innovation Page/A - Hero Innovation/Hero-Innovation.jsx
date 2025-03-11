@@ -6,7 +6,7 @@ import "./Hero-Innovation.css";
 
 const Innovation = () => {
   return (
-    <section
+    <section id="hero-section"
       className="innovation"
       style={{
         backgroundImage: `url(${backgroundImageInno})`,
