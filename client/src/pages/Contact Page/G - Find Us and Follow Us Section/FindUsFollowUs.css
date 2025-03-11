@@ -1,0 +1,262 @@
+/* Container */
+.findusfollowus-container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Horizontal Lines */
+.findusfollowus-top-line {
+    border: none;
+    height: 3px;
+    background-color: black;
+    margin: 10px 0;
+    width: 100vw;
+    max-width: 1800px;
+}
+
+/* Content Layout */
+.findusfollowus-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-wrap: nowrap;
+}
+
+/* Find Us */
+.findusfollowus-find-us {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+    text-align: left;
+}
+
+.findusfollowus-location {
+    display: flex;
+    align-items: center;
+}
+
+.findusfollowus-location-icon {
+    width: 250px;
+    height: 150px;
+}
+
+.findusfollowus-location-text p {
+    margin: 2px 0;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.findusfollowus-section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Divider */
+.findusfollowus-divider {
+    width: 3px;
+    height: 150px;
+    background-color: black;
+    margin: 0 40px;
+}
+
+/* Follow Us */
+.findusfollowus-follow-us {
+    text-align: left;
+    flex: 1;
+}
+
+.findusfollowus-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 3rem;
+}
+
+.findusfollowus-icons a {
+    color: black;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.findusfollowus-icons a:hover {
+    transform: scale(1.2);
+    color: #007bff;
+}
+
+/* Video Container */
+.findusfollowus-video {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Video Styling */
+.findusfollowus-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gradient Overlay */
+.findusfollowus-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #456b8bc5, #b6d95cc7, #849c3ac7, #619e89bd, #47708dbb);
+    mix-blend-mode: multiply; /* Blends with the video */
+    pointer-events: none;
+}
+
+/* === Responsive Adjustments === */
+
+/* 1440px */
+@media (max-width: 1440px) {
+    .findusfollowus-content {
+        padding: 20px 30px;
+    }
+
+    .findusfollowus-section-title {
+        font-size: 2.5rem;
+    }
+
+    .findusfollowus-top-line {
+        width: 100%;
+    }
+
+    .findusfollowus-divider {
+        height: 90px;
+    }
+}
+
+/* 1024px (Tablets) */
+@media (max-width: 1024px) {
+    .findusfollowus-content {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .findusfollowus-divider {
+        height: 90px;
+    }
+
+    .findusfollowus-find-us,
+    .findusfollowus-follow-us {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .findusfollowus-icons {
+        justify-content: center;
+    }
+
+    .findusfollowus-video {
+        height: 50vh;
+    }
+
+    .findusfollowus-top-line {
+        width: 100%;
+    }
+}
+
+/* 834px (iPad Air) */
+@media (max-width: 834px) {
+    .findusfollowus-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .findusfollowus-section-title {
+        font-size: 2rem;
+    }
+
+    .findusfollowus-icons {
+        font-size: 2.5rem;
+    }
+
+    .findusfollowus-top-line {
+        width: 100%;
+    }
+
+    .findusfollowus-divider {
+        display: none;
+    }
+}
+
+/* 728px (Small Tablets) */
+@media (max-width: 728px) {
+    .findusfollowus-content {
+        padding: 10px;
+    }
+
+    .findusfollowus-location-icon {
+        width: 200px;
+        height: 120px;
+    }
+
+    .findusfollowus-section-title {
+        font-size: 1.8rem;
+    }
+
+    .findusfollowus-icons {
+        font-size: 2rem;
+        gap: 15px;
+    }
+
+    .findusfollowus-top-line {
+        width: 100%;
+    }
+
+    .findusfollowus-divider {
+        height: 70px;
+    }
+}
+
+/* 480px (Mobile) */
+@media (max-width: 480px) {
+    .findusfollowus-content {
+        padding: 5px;
+    }
+
+    .findusfollowus-section-title {
+        font-size: 1.5rem;
+    }
+
+    .findusfollowus-location-icon {
+        width: 150px;
+        height: 100px;
+    }
+
+    .findusfollowus-location-text p {
+        font-size: 1rem;
+    }
+
+    .findusfollowus-icons {
+        font-size: 1.8rem;
+        gap: 10px;
+    }
+
+    .findusfollowus-video {
+        height: 40vh;
+    }
+
+    .findusfollowus-top-line {
+        width: 100%;
+    }
+
+    .findusfollowus-divider {
+        height: 50px;
+    }
+}

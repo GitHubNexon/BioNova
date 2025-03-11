@@ -75,7 +75,7 @@
     position: absolute;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, #485e23a2, #372c2871);
+    background: radial-gradient(circle, #485e2377, #372c2871);
     border-radius: 50%;
     filter: blur(50px);
     z-index: 0;
@@ -243,7 +243,7 @@
         justify-content: right;
         align-items: right;
         position: relative;
-        margin-bottom: 20px; /* Add spacing below images */
+        margin-bottom: -70px; /* Add spacing below images */
     }
 
     .agri-bio-image {
@@ -253,11 +253,10 @@
     }
 
     .agri-bio-orbs {
-        max-width: 300px; /* Keep it slightly smaller */
+        max-width: 400px; /* Keep it slightly smaller */
         position: absolute;
-        top: 
-        0;
-        left: 0%;
+        top: 10;
+        left: 10%;
         transform: translateX(-50%);
         z-index: 1;
     }
@@ -268,6 +267,66 @@
         filter: blur(30px);
         position: absolute;
         top: 10;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 375px) {
+    .agri-bio-section {
+        flex-direction: column-reverse; /* Moves images above text */
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .agri-bio-content {
+        max-width: 100%;
+    }
+
+    .agri-bio-title {
+        font-size: 1.8rem;
+    }
+
+    .agri-bio-description {
+        font-size: 0.95rem;
+    }
+
+    .agri-bio-list {
+        font-size: 0.9rem;
+    }
+
+    /* Make images smaller and aligned properly */
+    .agri-bio-image-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
+        margin-bottom: -90px; /* Space below images */
+    }
+
+    .agri-bio-image {
+        max-width: 400px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .agri-bio-orbs {
+        max-width: 300px; /* Slightly smaller for better scaling */
+        position: absolute;
+        top: 0;
+        left: 0%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .agri-bio-gradient-glow {
+        width: 350px;
+        height: 350px;
+        filter: blur(30px);
+        position: absolute;
+        top: 10px;
         left: 50%;
         transform: translateX(-50%);
     }

@@ -1,9 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "./ForumSection.css";
 import ForumImage from "../../../assets/image/forum-image.png";
 
 const ForumSection = () => {
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/forum");
+  }
+
   return (
     <motion.section
       className="forum-section"
@@ -34,7 +41,7 @@ const ForumSection = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        viewport={{ amount: 0.3 }}
+       
       >
         {/* Left Side - Dark Box */}
         <motion.div
@@ -42,7 +49,7 @@ const ForumSection = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ amount: 0.3 }}
+         
         >
           <div className="cutout-box"></div> {/* Square Cutout */}
           <div className="cutout-box"></div> {/* Square Cutout */}
@@ -54,6 +61,7 @@ const ForumSection = () => {
 
           <motion.button
             className="forum-button"
+            onClick={handleNavigate}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
@@ -68,7 +76,7 @@ const ForumSection = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          viewport={{ amount: 0.3 }}
+         
         >
           <img src={ForumImage} alt="BioNova Forum Discussion" className="forum-image" />
         </motion.div>

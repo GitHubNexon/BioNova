@@ -1,0 +1,191 @@
+.leadership {
+    text-align: center;
+    padding: 60px 5%;
+}
+
+.title {
+    font-size: 13rem;
+    font-weight: 600;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+/* Leader Card */
+.leader-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 1500px;
+    margin: auto;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.8s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Hover Effects */
+.leader-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Border Hover Effect */
+.leader-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.leader-card:hover::before {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Leader Image */
+.leader-image img {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.leader-card:hover {
+    transform: scale(1.02);
+}
+
+/* Leader Info */
+.leader-info {
+    padding-left: 50px;
+    text-align: left;
+    transition: color 2s ease-in-out;
+}
+
+.leader-info h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.position {
+    font-size: 1.8rem;
+    color: gray;
+}
+
+.quote {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+
+/* 1440px - Large Screens */
+@media (max-width: 1440px) {
+    .title {
+        font-size: 10rem;
+    }
+    .leader-card {
+        max-width: 1300px;
+    }
+    .leader-image img {
+        width: 200%;
+        height: 600px;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+/* 1024px - Laptops */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 7rem;
+    }
+    .leader-card {
+        max-width: 750px;
+        padding: 15px;
+    }
+    .leader-image img {
+        width: 580px;
+        height: 580px;
+    }
+}
+
+/* 834px - Tablets */
+@media (max-width: 834px) {
+    .title {
+        font-size: 6rem;
+    }
+    .leader-card {
+        flex-direction: column;
+        text-align: center;
+        max-width: 650px;
+    }
+    .leader-info {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    .leader-image img {
+        width: 660px;
+        height: 560px;
+    }
+}
+
+/* 768px - Tablets */
+@media (max-width: 768px) {
+    .title {
+        font-size: 5rem;
+    }
+    .leader-card {
+        max-width: 600px;
+    }
+    .leader-image img {
+        width: 550px;
+        height: 550px;
+    }
+    .quote {
+        font-size: 1rem;
+    }
+}
+
+/* 480px - Mobile Devices */
+@media (max-width: 480px) {
+    .title {
+        font-size: 3rem;
+    }
+    .leader-card {
+        flex-direction: column;
+        max-width: 90%;
+        padding: 10px;
+    }
+    .leader-image img {
+        width: 330px;
+        height: 350px;
+    }
+    .leader-info h2 {
+        font-size: 1.5rem;
+    }
+    .position {
+        font-size: 0.9rem;
+    }
+    .quote {
+        font-size: 0.9rem;
+    }
+}

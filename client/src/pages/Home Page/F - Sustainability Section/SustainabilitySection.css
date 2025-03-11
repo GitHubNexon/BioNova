@@ -81,6 +81,16 @@
 
 /* Responsive Design */
 
+@media (max-width: 1440px) {
+  .section-title {
+    font-size: 3.5rem;
+  }
+
+  .sustainability-text {
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .section-subtitle {
     font-size: 1rem;
@@ -92,6 +102,35 @@
 
   .sustainability-text {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 834px) {
+  .sustainability-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .sustainability-content,
+  .sustainability-right-image {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .sustainability-text {
+    font-size: 0.8rem;
+  }
+
+  .sustainability-right-image img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .sustainability-top-video {
+    height: 35vh;
   }
 }
 

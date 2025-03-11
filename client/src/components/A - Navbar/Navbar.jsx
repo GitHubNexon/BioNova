@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IoClose, IoMenu } from "react-icons/io5"; // Icons for open/close menu
+import { motion, AnimatePresence } from "framer-motion"; // Motion effects
 import Logo from "../../assets/image/logo.svg";
 import "./Navbar.css";
 
@@ -11,21 +12,26 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        {/* Logo (Takes user to Home) */}
+        {/* Logo (Centered in Navbar) */}
         <Link to="/" className="logo">
           <img src={Logo} alt="BioNova Logo" />
         </Link>
 
         {/* Desktop Navigation */}
         <div className="desktop-nav">
-          {["Home", "Innovation", "Purpose", "Forum", "People"].map((item, index) => (
-            <Link 
-              key={index} 
-              to={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
-              className="nav-link"
+          {["Home", "Innovation", "Purpose", "People", "Forum"].map((item, index) => (
+            <motion.div 
+              key={index}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.2 }}
             >
-              {item}
-            </Link>
+              <Link 
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
+                className="nav-link"
+              >
+                {item}
+              </Link>
+            </motion.div>
           ))}
         </div>
 
@@ -40,22 +46,37 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-        {["Home", "Innovation", "Purpose", "Forum", "People"].map((item, index) => (
-          <Link 
-            key={index} 
-            to={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
-            className="mobile-link" 
-            onClick={() => setIsOpen(false)}
+      {/* Mobile Menu with Motion Effects */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.3 }}
+            className="mobile-menu"
           >
-            {item}
-          </Link>
-        ))}
-        <Link to="/contact" className="mobile-contact-btn" onClick={() => setIsOpen(false)}>
-          Contact
-        </Link>
-      </div>
+            {["Home", "Innovation", "Purpose", "Forum", "People", "Contact"].map((item, index) => (
+              <motion.div 
+                key={index}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Link 
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
+                  className="mobile-link" 
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item}
+                </Link>
+              </motion.div>
+            ))}
+            <Link to="/contact" className="mobile-contact-btn" onClick={() => setIsOpen(false)}>
+              Contact
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

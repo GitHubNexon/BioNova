@@ -1,237 +1,256 @@
 /* Main Section */
 .features-section {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #f4f2f0;
-  }
-  
-  /* Title */
-  .features-title {
-    margin-top: 3rem;
-    font-size: 3rem;
-    font-weight: bold;
-    
-  }
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f4f2f0;
+}
 
-  .features-title2 {
-    margin-bottom: 4rem;
-    font-size: 3rem;
-    font-weight: bold;
-    
-  }
-  
-  /* Features Grid */
-  .features-grid {
-    display: flex;
-    justify-content: center;
-    gap: 11rem;
-    flex-wrap: wrap;
-  }
-  
-  /* Feature Card */
-  .features-card {
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  /* Feature Icon */
-  .features-icon {
-    width: 300px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* SVG Size */
-  .features-img {
-    width: 300px;
-    height: 300px;
-  }
-  
-  /* Glow Effects */
-  
-  /* Feature Title */
-  .features-title {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-top: 10px;
-  }
-  
-  /* Feature Description */
-  .features-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin-top: 1rem;
-  }
-  
-  /* Section Description */
-  .features-description {
-    font-size: 1.4rem;
-    font-weight: 500;
-    max-width: 800px;
-    margin: 4rem auto;
-  }
-  
-  /* Bottom Decorative Bar */
-  .features-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    margin-top: 8rem;
-  }
-  
-  /* Bottom Navigation Items */
-  .nav-item {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #555;
-    margin: 0 16rem;
-  }
-  
-  /* Icons */
-  .nav-icon {
-    color: #55555563;
-    font-size: 1.3rem;
-  }
-  
+/* Title */
+.features-title {
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
 
-  /* 🔹 Responsive Fixes */
+.features-title2 {
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
 
+/* Features Grid */
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 11rem;
+  flex-wrap: wrap;
+}
+
+/* Feature Card */
+.features-card {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Feature Icon */
+.features-icon {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG Size */
+.features-img {
+  width: 300px;
+  height: 300px;
+}
+
+/* Feature Title */
+.features-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Feature Description */
+.features-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+/* Section Description */
+.features-description-below {
+  font-size: 1.4rem;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 4rem auto;
+}
+
+/* Bottom Decorative Bar */
+.features-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin-top: 8rem;
+}
+
+/* Bottom Navigation Items */
+.nav-item {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  margin: 0 16rem;
+}
+
+/* Icons */
+.nav-icon {
+  color: #55555563;
+  font-size: 1.3rem;
+}
+
+/* 🔹 Responsive Fixes */
 @media (min-width: 1440px) {
   .features-title,
   .features-title2 {
-    font-size: 3.5rem;
+      font-size: 3.5rem;
   }
 
   .features-grid {
-    gap: 12rem;
+      gap: 12rem;
   }
 
   .features-img {
-    width: 350px;
-    height: 350px;
+      width: 350px;
+      height: 350px;
   }
 
   .features-title {
-    font-size: 2.2rem;
+      font-size: 2.2rem;
   }
 
-  .features-description {
-    font-size: 1.4rem;
-  }
-
-  .features-description {
-    font-size: 1.6rem;
-    max-width: 900px;
+  .features-description-below{
+      font-size: 1.6rem;
+      max-width: 900px;
   }
 
   .features-nav {
-    padding: 10px 40px;
+      padding: 10px 40px;
   }
 
   .nav-item {
-    font-size: 1.2rem;
-    margin: 0 11rem;
+      font-size: 1.2rem;
+      margin: 0 11rem;
   }
 
   .nav-icon {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 }
+
 @media (max-width: 1024px) {
   .features-grid {
-    gap: 4rem;
+      gap: 4rem;
   }
 
   .features-title,
   .features-title2 {
-    font-size: 2.5rem;
+      font-size: 2.5rem;
   }
 
-  .features-description {
-    font-size: 1.3rem;
+  .features-description-below {
+      font-size: 1.3rem;
   }
 
   .nav-item {
-    margin: 0 3rem;
+      margin: 0 3rem;
+  }
+}
+
+/* 🔹 New Responsive Fixes for 834px */
+@media (max-width: 834px) {
+  .features-title,
+  .features-title2 {
+      font-size: 2.2rem;
+  }
+
+  .features-grid {
+      gap: 3rem;
+  }
+
+  .features-img {
+      width: 280px;
+      height: 280px;
+  }
+
+  .features-description-below {
+      font-size: 1.2rem;
+      max-width: 600px;
+  }
+
+  .features-nav {
+      padding: 12px 25px;
+  }
+
+  .nav-item {
+      font-size: 1.1rem;
+      margin: 0 5rem;
+  }
+
+  .nav-icon {
+      font-size: 1.3rem;
   }
 }
 
 @media (max-width: 768px) {
   .features-title,
   .features-title2 {
-    font-size: 2rem;
+      font-size: 2rem;
   }
 
   .features-grid {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
   }
 
-  .feature-img {
-    width: 250px;
-    height: 250px;
+  .features-img {
+      width: 250px;
+      height: 250px;
   }
 
   .features-title {
-    font-size: 1.8rem;
+      font-size: 1.8rem;
   }
 
-  .features-description {
-    font-size: 1.1rem;
-  }
-
-  .features-description {
-    font-size: 1.2rem;
-    max-width: 500px;
+  .features-description-below {
+      font-size: 1.2rem;
+      max-width: 500px;
   }
 
   .features-nav {
-    flex-direction: column;
-    text-align: center;
+      flex-direction: column;
+      text-align: center;
   }
 
   .nav-item {
-    margin: 0;
+      margin: 0;
   }
 }
 
 @media (max-width: 480px) {
   .features-title,
   .features-title2 {
-    font-size: 1.8rem;
+      font-size: 1.8rem;
   }
 
   .features-img {
-    width: 200px;
-    height: 200px;
+      width: 200px;
+      height: 200px;
   }
 
   .features-title {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 
-  .features-description {
-    font-size: 1rem;
-  }
-
-  .features-description {
-    font-size: 1rem;
-    max-width: 400px;
+  .features-description-below {
+      font-size: 1rem;
+      max-width: 400px;
   }
 
   .features-nav {
-    padding: 10px 20px;
+      padding: 10px 20px;
   }
 
   .nav-item {
-    font-size: 1rem;
+      font-size: 1rem;
   }
 }

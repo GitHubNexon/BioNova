@@ -1,0 +1,222 @@
+.job-container {
+    padding: 100px;
+    max-width: 1800px;
+    margin: auto;
+  }
+  
+  /* Header */
+  .job-header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Divider */
+  .job-divider {
+    border: none;
+    height: 4px;
+    background: #444;
+    margin: 20px 0;
+  }
+  
+  /* Job Title */
+  .job-container h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 40px 0;
+  }
+  
+  /* Job Section */
+  .job-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 40rem;
+    margin: 20px 0;
+  }
+  
+  /* Job Category */
+  .job-category {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  
+  /* Job Details */
+  .job-details {
+    max-width: 700px;
+  }
+  
+  /* Job Title */
+  .job-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  /* Job Location */
+  .job-location {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  /* Job Description */
+  .job-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+  
+  /* Learn More Button */
+  .job-learn-more {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .job-learn-more:hover {
+    text-decoration: underline;
+  }
+  
+  /* 🔥 RESPONSIVE DESIGN 🔥 */
+  
+  /* 1440px - Large Screens */
+  @media (max-width: 1440px) {
+    .job-container {
+      padding: 80px;
+      max-width: 1400px;
+    }
+    .job-section {
+      gap: 20rem;
+    }
+    .job-category {
+      font-size: 2.5rem;
+    }
+    .job-container h2 {
+      font-size: 2.8rem;
+    }
+  }
+  
+  /* 1024px - Medium Screens (Tablets, Small Laptops) */
+  @media (max-width: 1024px) {
+    .job-container {
+      padding: 60px;
+      max-width: 1000px;
+    }
+    .job-section {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .job-category {
+      font-size: 2.2rem;
+    }
+    .job-title {
+      font-size: 1.6rem;
+    }
+    .job-location {
+      font-size: 1.4rem;
+    }
+    .job-description {
+      font-size: 1rem;
+    }
+  }
+  
+  /* 834px - Small Tablets */
+  @media (max-width: 834px) {
+    .job-container {
+      padding: 50px;
+      max-width: 800px;
+    }
+    .job-header {
+      font-size: 1.8rem;
+    }
+    .job-container h2 {
+      font-size: 2.5rem;
+    }
+    .job-category {
+      font-size: 2rem;
+    }
+    .job-title {
+      font-size: 1.5rem;
+    }
+    .job-location {
+      font-size: 1.3rem;
+    }
+    .job-description {
+      font-size: 0.95rem;
+    }
+    .job-learn-more {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* 738px - Large Mobile */
+  @media (max-width: 738px) {
+    .job-container {
+      padding: 40px;
+      max-width: 700px;
+    }
+    .job-header {
+      font-size: 1.6rem;
+    }
+    .job-container h2 {
+      font-size: 2.2rem;
+    }
+    .job-category {
+      font-size: 1.8rem;
+    }
+    .job-title {
+      font-size: 1.4rem;
+    }
+    .job-location {
+      font-size: 1.2rem;
+    }
+    .job-description {
+      font-size: 0.9rem;
+    }
+    .job-learn-more {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* 480px - Mobile */
+  @media (max-width: 480px) {
+    .job-container {
+      padding: 30px;
+      max-width: 90%;
+    }
+    .job-header {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+    .job-container h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .job-section {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .job-category {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+    .job-title {
+      font-size: 1.3rem;
+    }
+    .job-location {
+      font-size: 1.1rem;
+    }
+    .job-description {
+      font-size: 0.85rem;
+    }
+    .job-learn-more {
+      font-size: 1rem;
+    }
+  }
+  

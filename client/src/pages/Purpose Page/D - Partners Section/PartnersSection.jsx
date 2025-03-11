@@ -10,7 +10,7 @@ const PartnersSection = () => {
   const isInView = useInView(sectionRef, { triggerOnce: false });
 
   return (
-    <section className="partners-section" ref={sectionRef}>
+    <section className="partnerss-section" ref={sectionRef}>
       {/* Title Animation */}
       <motion.h4
         initial={{ opacity: 0, y: -20 }}

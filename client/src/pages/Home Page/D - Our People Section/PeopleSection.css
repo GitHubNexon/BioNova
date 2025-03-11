@@ -31,7 +31,7 @@
 }
 
 /* Titles */
-.people-title {
+.peoples-title {
     font-size: 2rem;
     font-weight: 600;
     color: #ffffff;
@@ -73,6 +73,22 @@
 }
 
 /* 🔹 Responsive Design Fixes */
+
+@media (max-width: 1440px) {
+    .people-heading {
+        font-size: 4.5rem;
+    }
+
+    .people-text {
+        font-size: 1.4rem;
+    }
+
+    .join-btn {
+        font-size: 1.3rem;
+        padding: 12px 22px;
+    }
+}
+
 @media (max-width: 1024px) {
     .people-heading {
         font-size: 4rem;
@@ -85,6 +101,25 @@
     .join-btn {
         font-size: 1.3rem;
         padding: 10px 20px;
+    }
+}
+
+@media (max-width: 834px) {
+    .people-heading {
+        font-size: 3.5rem;
+    }
+
+    .people-text {
+        font-size: 1.2rem;
+    }
+
+    .join-btn {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+
+    .parallax-bg {
+        height: 130vh; /* Adjust to avoid gaps */
     }
 }
 

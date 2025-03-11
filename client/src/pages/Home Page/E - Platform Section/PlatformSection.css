@@ -103,69 +103,131 @@
   opacity: 0.9;
 }
 
-/* 🔹 Responsive Design Fixes */
-@media (max-width: 1024px) {
+/* 🔹 1440px - Large Desktop */
+@media (max-width: 1440px) {
   .platform-heading {
-      font-size: 2.2rem;
+    font-size: 2.3rem;
   }
   .platform-text {
-      font-size: 1.1rem;
+    font-size: 1.2rem;
   }
-  .explore-btn {
-      padding: 10px 20px;
-      font-size: 0.95rem;
+  .platform-image img {
+    max-width: 500px;
+  }
+  .platform-orbs-image {
+    width: 75%;
   }
 }
 
-@media (max-width: 768px) {
+/* 🔹 1024px - Tablet Landscape */
+@media (max-width: 1024px) {
   .platform-section {
-      flex-direction: column;
-      text-align: center;
+    padding: 3rem 1.5rem;
+  }
+  .platform-heading {
+    font-size: 2.2rem;
+  }
+  .platform-text {
+    font-size: 1.1rem;
+  }
+  .explore-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+  .platform-image img {
+    max-width: 450px;
+  }
+  .platform-orbs-image {
+    width: 70%;
+  }
+}
+
+/* 🔹 834px - Tablet Portrait */
+@media (max-width: 834px) {
+  .platform-section {
+    flex-direction: row;
+    text-align: left;
   }
 
   .platform-content, .platform-image-container {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   .platform-heading {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .platform-text {
-      font-size: 1.05rem;
-  }
-
-  .platform-image img {
-      max-width: 85%;
-      margin: 0 auto;
-  }
-
-  .platform-orbs-image {
-      width: 70%;
-      top: 1rem; /* Adjusted to avoid overlap */
-  }
-}
-
-@media (max-width: 480px) {
-  .platform-heading {
-      font-size: 1.8rem;
-  }
-
-  .platform-text {
-      font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .explore-btn {
-      font-size: 0.9rem;
-      padding: 10px 18px;
+    padding: 10px 18px;
+    font-size: 0.9rem;
   }
 
   .platform-image img {
-      max-width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .platform-orbs-image {
-      width: 65%;
-      top: 0rem; /* Further adjusted for mobile */
+    width: 75%;
+    top: 2rem;
+  }
+}
+
+/* 🔹 768px - Small Tablets & Landscape Phones */
+@media (max-width: 768px) {
+  .platform-section {
+    flex-direction: column;
+    text-align: left;
+    padding: 3rem 1rem;
+  }
+
+  .platform-heading {
+    font-size: 1.9rem;
+  }
+
+  .platform-text {
+    font-size: 1rem;
+  }
+
+  .platform-image img {
+    max-width: 75%;
+  }
+
+  .platform-orbs-image {
+    width: 60%;
+    top: 1.5rem;
+  }
+}
+
+/* 🔹 480px - Mobile */
+@media (max-width: 480px) {
+  .platform-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .platform-heading {
+    font-size: 1.8rem;
+  }
+
+  .platform-text {
+    font-size: 0.95rem;
+  }
+
+  .explore-btn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .platform-image img {
+    max-width: 90%;
+  }
+
+  .platform-orbs-image {
+    width: 75%;
+    top: 2rem;
   }
 }

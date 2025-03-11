@@ -37,6 +37,7 @@ const TypewriterText = ({ text, delay = 0 }) => {
 const Purpose = () => {
   return (
     <section
+      id="hero-section"
       className="purpose"
       style={{
         backgroundImage: `url(${backgroundImagePurpose})`,

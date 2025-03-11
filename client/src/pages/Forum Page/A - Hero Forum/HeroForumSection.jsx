@@ -1,80 +1,32 @@
 import React from "react";
-import { motion } from "framer-motion";
-import "./HeroForumSection.css";
-import ForumImage from "../../../assets/image/forum-image.png";
+import HeroVideo from "../../../assets/videos/HeroForumSection.mp4"; // Adjust path accordingly
+import glowImage from "../../../assets/image/Gradient-glow-forum.png"; // Import glow image
+import "./HeroForumSection.css"; // Import CSS
 
-const ForumSection = () => {
+const HeroForumSection = () => {
   return (
-    <motion.section
-      className="forum-section"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ amount: 0.3 }} // Re-triggers when 30% is visible
-    >
-      {/* Top Text Section */}
-      <motion.div
-        className="forum-header"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        viewport={{ amount: 0.3 }} // Re-triggers when scrolling back
-      >
-        <h4 className="forum-subtitle">OUR FORUM</h4>
-        <h2 className="forum-title">
-          Unlocking Knowledge <br />
-          Potential for Biotech <br />
-          Innovations
-        </h2>
-      </motion.div>
+    <section id="hero-section"className="forum-hero-section">
+      {/* Background Video */}
+      <div className="forum-video-container">
+        <video className="forum-hero-video" autoPlay loop muted playsInline>
+          <source src={HeroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-      {/* Bottom Section: Two Columns */}
-      <motion.div
-        className="forum-content"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        viewport={{ amount: 0.3 }}
-      >
-        {/* Left Side - Dark Box */}
-        <motion.div
-          className="forum-left"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ amount: 0.3 }}
-        >
-          <div className="cutout-box"></div> {/* Square Cutout */}
-          <div className="cutout-box"></div> {/* Square Cutout */}
-          <h5 className="forum-label">LEARN WITH US</h5>
-          <h3 className="forum-text">
-            Insights into BioNova. <br />
-            Insights into Knowledge.
-          </h3>
+      {/* Gradient Overlay */}
+      <div className="forum-overlay"></div>
 
-          <motion.button
-            className="forum-button"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.3 }}
-          >
-            Learn More
-          </motion.button>
-        </motion.div>
+      {/* Glow Image */}
+      <img src={glowImage} alt="Glowing Effect" className="forum-glow-image" />
 
-        {/* Right Side - Image with Motion */}
-        <motion.div
-          className="forum-right"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          viewport={{ amount: 0.3 }}
-        >
-          <img src={ForumImage} alt="BioNova Forum Discussion" className="forum-image" />
-        </motion.div>
-      </motion.div>
-    </motion.section>
+      {/* Content */}
+      <div className="forum-hero-content">
+        <h1 className="forum-hero-title">Discuss. Discover. Innovate. <br /> Welcome to the BioNova Forum </h1>
+        <p className="forum-hero-subtitle">Join the community of biotechnology enthusiasts, researchers, and professionals to discuss the latest trends, share your insights, and collaborate on innovative projects.</p>
+      </div>
+    </section>
   );
 };
 
-export default ForumSection;
+export default HeroForumSection;

@@ -237,12 +237,12 @@
 
     /* Make images smaller and centered */
     .biopharma-image-container {
-        width: 80%;
+        width: 90%;
         display: flex;
         justify-content: right;
         align-items: right;
         position: relative;
-        margin-bottom: 20px; /* Add spacing below images */
+        margin-bottom: -70px; /* Add spacing below images */
     }
 
     .biopharma-image {
@@ -252,7 +252,7 @@
     }
 
     .biopharma-orbs {
-        max-width: 300px; /* Keep it slightly smaller */
+        max-width: 400px; /* Keep it slightly smaller */
         position: absolute;
         top: 0;
         left: 10%;
@@ -266,6 +266,66 @@
         filter: blur(30px);
         position: absolute;
         top: 10;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Medium Mobile Screens */
+@media (max-width: 425px) {
+    .biopharma-section {
+        flex-direction: column-reverse; /* Moves images above text */
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .biopharma-content {
+        max-width: 100%;
+    }
+
+    .biopharma-title {
+        font-size: 1.7rem;
+    }
+
+    .biopharma-description {
+        font-size: 0.9rem;
+    }
+
+    .biopharma-list {
+        font-size: 0.85rem;
+    }
+
+    /* Make images smaller and aligned properly */
+    .biopharma-image-container {
+        width: 95%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
+        margin-bottom: -80px; /* Space below images */
+    }
+
+    .biopharma-image {
+        max-width: 420px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .biopharma-orbs {
+        max-width: 320px; /* Slightly smaller for better scaling */
+        position: absolute;
+        top: 0;
+        left: 10%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .biopharma-gradient-glow {
+        width: 370px;
+        height: 370px;
+        filter: blur(30px);
+        position: absolute;
+        top: 10px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -302,20 +362,20 @@
         justify-content: flex-end;
         align-items: flex-end;
         position: relative;
-        margin-bottom: 20px; /* Space below images */
+        margin-bottom: -90px; /* Space below images */
     }
 
     .biopharma-image {
-        max-width: 500px;
+        max-width: 400px;
         position: relative;
         z-index: 1;
     }
 
     .biopharma-orbs {
-        max-width: 280px; /* Slightly smaller for better scaling */
+        max-width: 300px; /* Slightly smaller for better scaling */
         position: absolute;
         top: 0;
-        left: 20%;
+        left: 10%;
         transform: translateX(-50%);
         z-index: 1;
     }
@@ -330,3 +390,4 @@
         transform: translateX(-50%);
     }
 }
+

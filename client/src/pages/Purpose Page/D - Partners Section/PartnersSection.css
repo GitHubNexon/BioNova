@@ -1,32 +1,32 @@
-.partners-section {
+.partnerss-section {
     position: relative;
     text-align: center;
-    background-color: #f5f5f5;
     padding: 100px 5%;
+    background-color: #f4f2f0;
     overflow: hidden;
 }
 
 /* Titles */
-.partners-section h4 {
-    font-size: 1.2rem;
+.partnerss-section h4 {
+    font-size: 2rem;
     font-weight: 600;
-    color: #333;
+    color: #444;
     margin-bottom: 10px;
 }
 
-.partners-section h2 {
-    font-size: 2.8rem;
+.partnerss-section h2 {
+    font-size: 3rem;
     font-weight: 700;
     color: #222;
     margin-bottom: 20px;
 }
 
 /* Paragraph */
-.partners-section p {
-    font-size: 1.1rem;
+.partnerss-section p {
+    font-size: 1.5rem;
     color: #444;
-    max-width: 750px;
-    margin: 0 auto 15px;
+    max-width: 850px;
+    margin: 0 auto 30px;
     line-height: 1.6;
 }
 
@@ -34,13 +34,13 @@
 .partners-logos {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin-top: 40px;
+    gap: 12rem;
+    margin-top: 6rem;
     flex-wrap: wrap;
 }
 
 .partners-logos img {
-    height: 60px;
+    height: 150px;
     max-width: 200px;
     object-fit: contain;
 }
@@ -59,7 +59,7 @@
 .gradient-bar {
     position: absolute;
     width: 150px;
-    height: 10px;
+    height: 20px;
     border-radius: 10px;
     background: linear-gradient(90deg, #5865f2, #ff6584);
     opacity: 0.8;
@@ -107,7 +107,7 @@
 
 /* Large Screens (1440px and above) */
 @media (min-width: 1440px) {
-    .partners-section {
+    .partnerss-section {
         padding: 120px 8%;
         background: radial-gradient(circle at center, #e3e3e3 10%, #f5f5f5 90%);
     }
@@ -124,8 +124,8 @@
 }
 
 /* Laptops & Desktops (1024px - 1439px) */
-@media (max-width: 1439px) {
-    .partners-section {
+@media (max-width: 1440px) {
+    .partnerss-section {
         padding: 90px 6%;
         background: radial-gradient(circle at top, #eaeaea 20%, #f5f5f5 80%);
     }
@@ -140,9 +140,8 @@
     }
 }
 
-/* Tablets (768px - 1023px) */
-@media (max-width: 1023px) {
-    .partners-section {
+@media (max-width: 1024px) {
+    .partnerss-section {
         padding: 80px 5%;
         background: linear-gradient(180deg, #f0f0f0, #f5f5f5);
     }
@@ -157,19 +156,18 @@
     }
 }
 
-/* Mobile (480px - 767px) */
-@media (max-width: 767px) {
-    .partners-section {
+@media (max-width: 768px) {
+    .partnerss-section {
         padding: 60px 5%;
         background: linear-gradient(180deg, #ffffff, #f5f5f5);
     }
 
-    .partners-section h2 {
+    .partnerss-section h2 {
         font-size: 2rem;
     }
 
     .gradient-bar {
-        width: 120px;
+        width: 90px;
     }
 
     .square {
@@ -179,18 +177,29 @@
 }
 
 /* Small Phones (320px - 479px) */
-@media (max-width: 479px) {
-    .partners-section {
+@media (max-width: 480px) {
+    .partnerss-section {
         padding: 50px 5%;
         background: linear-gradient(180deg, #ffffff, #f8f8f8);
     }
+    .partnerss-section h4 {
+        font-size: 1.5rem;
+    }
 
-    .partners-section h2 {
+    .partnerss-section p {
+        font-size: 1rem;
+    }
+
+    .partnerss-section h2 {
         font-size: 1.8rem;
     }
 
+    .partners-logos {
+        gap: 6rem;
+    }
+
     .gradient-bar {
-        width: 100px;
+        width: 40px;
     }
 
     .square {

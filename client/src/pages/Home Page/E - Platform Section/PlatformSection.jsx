@@ -1,10 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "./PlatformSection.css";
 import PlatformImage from "../../../assets/image/platform-image.png";
 import PlatformOrbsImage from "../../../assets/image/platform-orbs-image.png";
 
 const PlatformSection = () => {
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/innovation");
+  };
   return (
     <section className="platform-section">
       {/* Left Content Section */}
@@ -63,6 +69,7 @@ const PlatformSection = () => {
 
         <motion.button
           className="explore-btn"
+          onClick={handleNavigate}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           variants={{
@@ -70,7 +77,7 @@ const PlatformSection = () => {
             visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.15 } },
           }}
         >
-          Explore Our Platform
+          Explore Our Innovation
         </motion.button>
       </motion.div>
 

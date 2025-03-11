@@ -1,147 +1,238 @@
 /* BioMimicry Section */
 .bio-mimicry-container {
-    width: 100%;
-    max-width: 2000px;
-    margin: 0 auto;
-    padding: 60px 5%;
-    background-color: #ececec;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 80px 5%;
+  text-align: center;
+}
+
+/* Header */
+.bio-mimicry-header {
+  text-align: left;
+  max-width: 1400px; /* Adjust width as needed */
+  margin-bottom: 20px;
+}
+
+.bio-mimicry-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.bio-mimicry-header p {
+  font-size: 1.8rem;
+  color: #555;
+  font-weight: 500;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Content Layout */
+.bio-mimicry-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+/* Image Section */
+.bio-mimicry-image {
+  flex: 1;
+  max-width: 48%;
+}
+
+.bio-mimicry-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Articles Section */
+.bio-mimicry-articles {
+  flex: 1;
+  max-width: 48%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Article Cards */
+.bio-mimicry-card {
+  background: #fff;
+  padding: 60px;
+  border-radius: 40px;
+  text-align: left;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bio-mimicry-card:hover {
+  transform: translateY(-5px);
+}
+
+.bio-mimicry-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.bio-mimicry-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.bio-mimicry-card a {
+  font-size: 1rem;
+  color: #0073e6;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* 🔥 Better Responsive Design */
+@media (max-width: 1600px) {
+  .bio-mimicry-container {
+    padding: 80px 7%;
+  }
+  
+  .bio-mimicry-content {
+    gap: 30px;
+  }
+
+  .bio-mimicry-card {
+    padding: 55px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .bio-mimicry-container {
+    padding: 70px 6%;
+  }
+
+  .bio-mimicry-content {
+    gap: 25px;
+  }
+
+  .bio-mimicry-articles {
+    max-width: 50%;
+  }
+
+  .bio-mimicry-card {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .bio-mimicry-content {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
-  
-  /* Header */
-  .bio-mimicry-header h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 10px;
-  }
-  
-  .bio-mimicry-header p {
-    font-size: 1.4rem;
-    color: #555;
-    font-weight: 500;
-  }
-  
-  /* Content Layout */
-  .bio-mimicry-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 40px;
-  }
-  
-  /* Image Section */
+
   .bio-mimicry-image {
-    flex: 1;
-    max-width: 48%;
+    max-width: 80%;
   }
-  
-  .bio-mimicry-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 50px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Articles */
+
   .bio-mimicry-articles {
-    flex: 1;
-    max-width: 48%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    max-width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bio-mimicry-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-mimicry-image {
+    max-width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .bio-mimicry-articles {
+    max-width: 90%;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 834px) {
+  .bio-mimicry-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .bio-mimicry-header p {
+    font-size: 1.3rem;
+  }
+
+  .bio-mimicry-card {
+    padding: 45px;
+  }
+
+  .bio-mimicry-image {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bio-mimicry-header h2 {
+    font-size: 2rem;
+  }
+
+  .bio-mimicry-header p {
+    font-size: 1.2rem;
+  }
+
+  .bio-mimicry-content {
+    flex-direction: column;
+  }
+
+  .bio-mimicry-image {
+    max-width: 100%;
+  }
+
+  .bio-mimicry-articles {
+    max-width: 100%;
+    grid-template-columns: 1fr;
     gap: 15px;
   }
-  
-  /* Article Cards */
+}
+
+@media (max-width: 480px) {
+  .bio-mimicry-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .bio-mimicry-header p {
+    font-size: 1rem;
+  }
+
+  .bio-mimicry-image img {
+    max-width: 100%;
+  }
+
   .bio-mimicry-card {
-    background: #fff;
-    padding: 78px;
-    border-radius: 50px;
-    text-align: left;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    padding: 35px;
+    border-radius: 30px;
   }
-  
-  .bio-mimicry-card:hover {
-    transform: translateY(-5px);
-  }
-  
+
   .bio-mimicry-card h4 {
     font-size: 1rem;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 10px;
   }
-  
+
   .bio-mimicry-card p {
     font-size: 0.9rem;
-    color: #555;
   }
-  
+
   .bio-mimicry-card a {
     font-size: 0.9rem;
-    color: #0073e6;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
   }
-  
-  /* 🔥 Responsive Design */
-  @media (max-width: 1024px) {
-    .bio-mimicry-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .bio-mimicry-image {
-      max-width: 80%;
-    }
-  
-    .bio-mimicry-articles {
-      max-width: 100%;
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .bio-mimicry-header h2 {
-      font-size: 2rem;
-    }
-  
-    .bio-mimicry-header p {
-      font-size: 1.2rem;
-    }
-  
-    .bio-mimicry-image {
-      max-width: 90%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .bio-mimicry-header h2 {
-      font-size: 1.8rem;
-    }
-  
-    .bio-mimicry-header p {
-      font-size: 1rem;
-    }
-  
-    .bio-mimicry-image img {
-      max-width: 100%;
-    }
-  
-    .bio-mimicry-card h4 {
-      font-size: 0.9rem;
-    }
-  
-    .bio-mimicry-card p {
-      font-size: 0.8rem;
-    }
-  
-    .bio-mimicry-card a {
-      font-size: 0.8rem;
-    }
-  }
-  
+}

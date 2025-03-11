@@ -448,7 +448,7 @@
         justify-content: flex-end;
         align-items: flex-end;
         position: relative;
-        margin-bottom: 20px; /* Space below images */
+        margin-bottom: -20px; /* Space below images */
     }
 
     .genetic-image {

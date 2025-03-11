@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import PurposeImage from "../../../assets/image/purpose-image.png"; // Replace with actual image path
 import { FaArrowRight } from "react-icons/fa";
 import "./PurposeSection.css";
@@ -7,6 +8,11 @@ import "./PurposeSection.css";
 const PurposeSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.3 });
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/purpose");
+  };
 
   return (
     <section id="purpose-section" className="purpose-section" ref={ref}>
@@ -33,7 +39,7 @@ const PurposeSection = () => {
 
         {/* Text Content */}
         <motion.div
-          className="purpose-content"
+          className="purpose-contents"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
           transition={{ duration: 0.8 }}
@@ -46,6 +52,7 @@ const PurposeSection = () => {
           </p>
           <motion.button
             className="learn-more-btn"
+            onClick={handleNavigate}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 10 }}

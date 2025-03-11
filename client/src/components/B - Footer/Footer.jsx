@@ -31,13 +31,12 @@ const Footer = () => {
         >
           <h4>Navigation</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Purpose</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="#innovation">Innovation</a></li>
+            <li><a href="#purpose">Purpose</a></li>
+            <li><a href="#people">People</a></li>
+            <li><a href="#forum">Forum</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </motion.div>
 

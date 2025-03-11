@@ -1,7 +1,7 @@
 /* Main Section */
 .featured-innovation-section {
     text-align: center;
-    padding: 60px 20px;
+    padding: 100px 20px;
     background-color: #f4f2f0;
 }
 
@@ -9,7 +9,7 @@
 .featured-title {
     margin-top: 3rem;
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 /* Features Grid */
@@ -151,6 +151,39 @@
 
     .nav-item {
         margin: 0 3rem;
+    }
+}
+
+@media (max-width: 834px) {
+    .featured-title {
+        font-size: 2.2rem;
+    }
+
+    .featured-grid {
+        gap: 5rem;
+    }
+
+    .featured-img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .featured-description {
+        font-size: 1.25rem;
+        max-width: 600px;
+    }
+
+    .featured-nav {
+        padding: 12px 25px;
+    }
+
+    .nav-item {
+        font-size: 1.1rem;
+        margin: 0 6rem;
+    }
+
+    .nav-icon {
+        font-size: 1.4rem;
     }
 }
 

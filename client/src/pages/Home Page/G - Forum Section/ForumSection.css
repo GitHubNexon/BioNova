@@ -1,7 +1,5 @@
 .forum-section {
-  max-width: 1800px;
   margin: 0 auto;
-  padding: 4rem 2rem;
   text-align: center;
 }
 
@@ -54,8 +52,8 @@
   content: "";
   position: absolute;
   top: 0;
-  right: -9px;
-  width: 9px;
+  right: -6px;
+  width: 10px;
   height: 100%;
   background: linear-gradient(to bottom, #ff00ff, #ff8c00);
 }

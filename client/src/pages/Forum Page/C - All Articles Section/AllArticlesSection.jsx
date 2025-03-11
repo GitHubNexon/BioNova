@@ -79,8 +79,8 @@ const AllArticlesSection = () => {
       }}
     >
       <div className="all-articles-header">
-        <p>THERE’S ALWAYS MORE TO EXPLORE</p>
-        <h2>ALL ARTICLES</h2>
+        <h3>THERE’S ALWAYS MORE TO EXPLORE</h3>
+        <h2 className="all-articles-headers">ALL ARTICLES</h2>
       </div>
 
       <div className="all-articles-grid">

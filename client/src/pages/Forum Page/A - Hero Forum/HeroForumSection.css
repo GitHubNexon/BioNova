@@ -1,0 +1,217 @@
+/* People Hero Section */
+.forum-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Container for Video */
+.forum-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Video Background */
+.forum-hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gradient Overlay */
+.forum-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #e6ee4942, #84af5a7e, #a66d8198, #8f91bd7e, #9371b27a);
+}
+
+/* Glow Image */
+.forum-glow-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    pointer-events: none; /* Prevent interaction */
+    animation: people-glowFade 2s ease-in-out infinite alternate;
+}
+
+/* Content */
+.forum-hero-content {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    animation: people-fadeIn 1.5s ease-in-out;
+}
+
+/* Title */
+.forum-hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: people-slideUp 1s ease-in-out forwards 0.3s;
+}
+
+/* Subtitle */
+.forum-hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    opacity: 0;
+    animation: people-slideUp 1s ease-in-out forwards 0.5s;
+}
+
+/* Button */
+.forum-hero-button {
+    margin-top: 20px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: people-fadeIn 1s ease-in-out forwards 0.8s;
+}
+
+.forum-hero-button:hover {
+    background: white;
+    color: black;
+}
+
+/* Animations */
+@keyframes people-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes people-slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes people-glowFade {
+    from {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* Responsive Design */
+
+
+@media (max-width: 1440px) {
+    .forum-hero-title {
+        font-size: 2.8rem;
+    }
+    .forum-hero-subtitle {
+        font-size: 1.4rem;
+    }
+    .forum-hero-button {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
+    .forum-glow-image {
+        width: 750px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .forum-hero-title {
+        font-size: 2.5rem;
+    }
+    .forum-hero-subtitle {
+        font-size: 1.3rem;
+    }
+    .forum-hero-button {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+    }
+    .forum-glow-image {
+        width: 600px;
+    }
+}
+
+
+@media (max-width: 834px) {
+    .forum-hero-title {
+        font-size: 2.2rem;
+    }
+    .forum-hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .forum-hero-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .forum-glow-image {
+        width: 600px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .forum-hero-title {
+        font-size: 2rem;
+    }
+    .forum-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .forum-hero-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .forum-glow-image {
+        width: 500px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .forum-hero-title {
+        font-size: 1.8rem;
+    }
+    .forum-hero-subtitle {
+        font-size: 1rem;
+    }
+    .forum-hero-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+    .forum-glow-image {
+        width: 450px;
+    }
+}
