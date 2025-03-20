@@ -71,9 +71,7 @@ const Navbar = () => {
                 </Link>
               </motion.div>
             ))}
-            <Link to="/contact" className="mobile-contact-btn" onClick={() => setIsOpen(false)}>
-              Contact
-            </Link>
+          
           </motion.div>
         )}
       </AnimatePresence>

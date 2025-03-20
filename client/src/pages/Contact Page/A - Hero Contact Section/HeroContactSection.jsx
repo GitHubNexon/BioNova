@@ -24,7 +24,12 @@ const HeroContactSection = () => {
       <div className="contact-hero-content">
         <h1 className="contact-hero-title">Your Next Breakthrough <br /> Starts Here</h1>
         <p className="contact-hero-subtitle">Whether you have inquiries, collaboration ideas, or need support, we’re here to help. Reach out and let’s make something great together.</p>
-        <button className="contact-hero-button">Get in Touch</button>
+        <button 
+          className="contact-hero-button"
+          onClick={() => document.getElementById("contact-form-section").scrollIntoView({ behavior: "smooth" })}
+        >
+          Get in Touch
+        </button>
       </div>
     </section>
   );
