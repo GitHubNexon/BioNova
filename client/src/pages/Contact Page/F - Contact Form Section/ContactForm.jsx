@@ -5,13 +5,15 @@ import "./ContactForm.css";
 const ContactForm = () => {
   return (
     <motion.div 
+      id="contact-form-section"
       className="form-container"
-      initial={{ opacity: 0, y: 50 }} // Start hidden & move up
-      whileInView={{ opacity: 1, y: 0 }} // Animate when in view
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true }} // Runs once per page load
+      viewport={{ once: true }} 
     >
       {/* Header Section with Motion */}
+
       <motion.div 
         className="form-header"
         initial={{ opacity: 0, x: -50 }} 
@@ -33,6 +35,7 @@ const ContactForm = () => {
       </motion.div>
 
       {/* Form Fields with Staggered Animation */}
+
       <motion.form 
         className="contact-form"
         initial={{ opacity: 0, y: 50 }}
@@ -86,6 +89,7 @@ const ContactForm = () => {
         ></motion.textarea>
 
         {/* Submit Button Animation */}
+        
         <motion.div 
           className="submit-container"
           initial={{ opacity: 0, scale: 0.8 }}

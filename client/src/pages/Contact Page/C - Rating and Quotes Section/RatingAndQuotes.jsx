@@ -18,7 +18,7 @@ const RatingAndQuotesSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % quotes.length);
-    }, 5000); // Changes every 4 seconds
+    }, 7000); 
 
     return () => clearInterval(interval);
   }, []);
